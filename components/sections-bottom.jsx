@@ -533,33 +533,77 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-display font-700 uppercase text-lg text-white">2. Allgemeine Hinweise &amp; Rechtsgrundlagen</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">2. Gesetzlicher Datenschutzbeauftragter</h4>
+                <p>
+                  Für unser Unternehmen ist die Bestellung eines Datenschutzbeauftragten gesetzlich nicht erforderlich, da die gesetzlichen Schwellenwerte gemäß § 38 BDSG (mindestens 20 Personen, die ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind) nicht erreicht werden und keine Verarbeitungen gemäß Art. 37 Abs. 1 lit. b und c DSGVO vorliegen. Bei Fragen zum Datenschutz wenden Sie sich bitte direkt an die oben genannte verantwortliche Stelle.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">3. Hosting &amp; Auftragsverarbeitung (AVV)</h4>
+                <p>
+                  Wir hosten die Inhalte unserer Website bei einem externen Webhosting-Dienstleister (Host / Server-Infrastruktur). Personenbezogene Daten, die auf dieser Website erfasst werden (z. B. IP-Adressen in Server-Logfiles), werden auf den Servern des Hosters verarbeitet.
+                </p>
+                <p>
+                  Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
+                </p>
+                <p>
+                  <strong>Vertrag über Auftragsverarbeitung (AVV):</strong><br />
+                  Um die datenschutzkonforme Verarbeitung zu gewährleisten, haben wir mit unserem Hosting-Dienstleister einen Vertrag über Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO geschlossen. Dieser stellt sicher, dass der Hoster die personenbezogenen Daten unserer Webseitenbesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">4. Allgemeine Hinweise &amp; Rechtsgrundlagen</h4>
                 <p>
                   Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
                 </p>
                 <p>
-                  Die Verarbeitung personenbezogener Daten auf unserer Website erfolgt auf Basis der Vorgaben der EU-Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG):
+                  Die Verarbeitung personenbezogener Daten auf unserer Website erfolgt auf Basis folgender Rechtsgrundlagen der DSGVO:
                 </p>
                 <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
-                  <li><strong>Art. 6 Abs. 1 lit. a DSGVO:</strong> Die betroffene Person hat ihre Einwilligung zur Verarbeitung der sie betreffenden personenbezogenen Daten für einen oder mehrere bestimmte Zwecke gegeben.</li>
-                  <li><strong>Art. 6 Abs. 1 lit. b DSGVO:</strong> Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich (z. B. Platzbuchung, Anfragen).</li>
-                  <li><strong>Art. 6 Abs. 1 lit. f DSGVO:</strong> Die Verarbeitung ist zur Wahrung unserer berechtigten Interessen erforderlich (z. B. sicherer und stabiler Betrieb der Website, IT-Sicherheit).</li>
+                  <li><strong>Art. 6 Abs. 1 lit. a DSGVO:</strong> Einwilligung der betroffenen Person.</li>
+                  <li><strong>Art. 6 Abs. 1 lit. b DSGVO:</strong> Erfüllung eines Vertrags oder Durchführung vorvertraglicher Maßnahmen (z. B. Platzreservierung, Anfragen).</li>
+                  <li><strong>Art. 6 Abs. 1 lit. c DSGVO:</strong> Erfüllung einer rechtlichen Verpflichtung (z. B. steuer- und handelsrechtliche Aufbewahrungspflichten).</li>
+                  <li><strong>Art. 6 Abs. 1 lit. f DSGVO:</strong> Wahrung unserer berechtigten Interessen (z. B. stabiler und sicherer Webseitenbetrieb, Missbrauchsprävention).</li>
                 </ul>
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-display font-700 uppercase text-lg text-white">3. SSL- bzw. TLS-Verschlüsselung</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">5. Speicherdauer &amp; konkrete Löschfristen</h4>
+                <p>
+                  Soweit in dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wird, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt:
+                </p>
+                <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/70 text-sm">
+                  <li><strong>Server-Log-Dateien:</strong> Werden aus Sicherheitsgründen (z. B. zur Aufklärung von Missbrauchs- oder Angriffsversuchen) für eine Dauer von <strong>7 bis maximal 14 Tagen</strong> gespeichert und danach automatisch gelöscht oder anonymisiert.</li>
+                  <li><strong>Kontaktanfragen (Telefon / E-Mail):</strong> Daten aus Anfragen werden nach abschließender Bearbeitung Ihres Anliegens gelöscht, sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen.</li>
+                  <li><strong>Buchungs- &amp; Abrechnungsdaten:</strong> Soweit über Telefon oder Buchungssysteme buchhalterisch relevante Belege entstehen, unterliegen diese den gesetzlichen Aufbewahrungsfristen von <strong>6 bis 10 Jahren</strong> gemäß § 147 AO (Abgabenordnung) und § 257 HGB (Handelsgesetzbuch).</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">6. Pflicht zur Bereitstellung personenbezogener Daten</h4>
+                <p>
+                  Die Bereitstellung der IP-Adresse und der technischen Server-Logdaten ist für den Abruf und die fehlerfreie Darstellung unserer Website technisch zwingend erforderlich (ohne IP-Adresse kann der Server keine Daten an Ihr Endgerät übermitteln).
+                </p>
+                <p>
+                  Bei einer telefonischen Platzreservierung oder Kontaktaufnahme ist die Bereitstellung von Name und Kontaktdaten (Telefonnummer bzw. E-Mail) für den Abschluss und die Durchführung des Buchungsvertrags bzw. die Beantwortung Ihrer Anfrage erforderlich. Eine Nichtbereitstellung hätte zur Folge, dass wir die Buchung oder Anfrage nicht bearbeiten können.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">7. SSL- bzw. TLS-Verschlüsselung</h4>
                 <p>
                   Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
                 </p>
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-display font-700 uppercase text-lg text-white">4. Datenerfassung auf dieser Website</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">8. Datenerfassung auf dieser Website</h4>
                 
                 <h5 className="font-display font-600 text-base text-white/90">Server-Log-Dateien</h5>
                 <p>
-                  Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:
+                  Der Provider der Seiten erhebt und speichert automatisch Informationen in Server-Log-Dateien, die Ihr Browser automatisch übermittelt:
                 </p>
                 <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
                   <li>Browsertyp und Browserversion</li>
@@ -569,75 +613,76 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
                   <li>Uhrzeit und Datum der Serveranfrage</li>
                 </ul>
                 <p>
-                  Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website.
+                  Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der IT-Sicherheit und Fehlerfreiheit des Systems).
                 </p>
 
                 <h5 className="font-display font-600 text-base text-white/90 pt-2">Cookies &amp; Tracking</h5>
                 <p>
-                  Unsere Website verzichtet auf den Einsatz einwilligungspflichtiger Tracking-, Analyse- oder Marketing-Cookies (wie z. B. Google Analytics oder Facebook Pixel). Es werden ausschließlich technisch notwendige Session-Zustände im Browser verarbeitet, um die Grundfunktionen der Website zu gewährleisten.
+                  Unsere Website verzichtet auf den Einsatz einwilligungspflichtiger Tracking-, Analyse- oder Marketing-Cookies (wie z. B. Google Analytics oder Meta Pixel). Es werden ausschließlich technisch notwendige Session-Zustände im Browser verarbeitet.
                 </p>
 
                 <h5 className="font-display font-600 text-base text-white/90 pt-2">Kontaktaufnahme (Telefon / E-Mail)</h5>
                 <p>
-                  Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Telefonnummer, Anfrage, Reservierungsdaten) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-                </p>
-                <p>
-                  Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen (z. B. Platzreservierung) erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+                  Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Telefonnummer, Anfrage, Reservierungsdaten) zum Zwecke der Bearbeitung Ihres Anliegens gespeichert und verarbeitet (Art. 6 Abs. 1 lit. b und lit. f DSGVO).
                 </p>
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-display font-700 uppercase text-lg text-white">5. Externe Buchungsplattform (Playtomic)</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">9. Externe Buchungsplattform (Playtomic)</h4>
                 <p>
-                  Für die Buchung und Abrechnung der Padel-Plätze verlinken wir auf das Buchungssystem von <strong>Playtomic</strong> (Playtomic S.L., Calle de Méndez Álvaro, 20, 28045 Madrid, Spanien).
+                  Für die Online-Buchung und Abrechnung der Padel-Plätze verlinken wir auf das Buchungssystem von <strong>Playtomic</strong> (Playtomic S.L., Calle de Méndez Álvaro, 20, 28045 Madrid, Spanien).
                 </p>
                 <p>
-                  Wenn Sie auf die entsprechenden Buchungs-Buttons klicken, werden Sie direkt auf die Plattform von Playtomic weitergeleitet. Dort gelten die Datenschutzbestimmungen und Nutzungsbedingungen der Playtomic S.L. Die Nutzung erfolgt zur Abwicklung Ihrer Platzbuchung (Art. 6 Abs. 1 lit. b DSGVO).
+                  Wenn Sie auf die entsprechenden Buchungs-Buttons klicken, werden Sie direkt auf die Plattform von Playtomic weitergeleitet. Bei der Nutzung des Buchungssystems verarbeitet Playtomic die erforderlichen Daten in eigener datenschutzrechtlicher Verantwortung gemäß deren Datenschutzbestimmungen. Die Verlinkung erfolgt zur Abwicklung Ihrer Platzbuchung (Art. 6 Abs. 1 lit. b DSGVO).
                 </p>
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-display font-700 uppercase text-lg text-white">6. Externe Schriften, Bibliotheken &amp; CDNs</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">10. Externe Schriften, CDNs &amp; Drittlandtransfer (USA)</h4>
                 
                 <h5 className="font-display font-600 text-base text-white/90">Google Fonts (Web Fonts)</h5>
                 <p>
-                  Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Web Fonts, die von Google bereitgestellt werden (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Aufruf einer Seite lädt Ihr Browser die benötigten Web Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.
+                  Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Web Fonts von Google (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Aufruf einer Seite lädt Ihr Browser die benötigten Web Fonts in ihren Browsercache. Hierbei wird Ihre IP-Adresse an Server von Google übermittelt, wobei auch eine Übertragung an Server der Muttergesellschaft Google LLC in den USA nicht ausgeschlossen werden kann.
                 </p>
                 <p>
-                  Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von Google aufnehmen. Hierdurch erlangt Google Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde. Die Nutzung von Google Fonts erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen und ansprechenden visuellen Darstellung unseres Online-Angebots).
+                  Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen typografischen Darstellung unseres Online-Auftritts).
                 </p>
 
                 <h5 className="font-display font-600 text-base text-white/90 pt-2">Content Delivery Networks (CDNs)</h5>
                 <p>
-                  Zur Bereitstellung von Skripten und Gestaltungsstilen verwenden wir Content Delivery Networks (z. B. Tailwind CSS CDN, UNPKG). Beim Abruf dieser Ressourcen wird Ihre IP-Adresse an die jeweiligen Server übermittelt. Dies erfolgt auf Basis von Art. 6 Abs. 1 lit. f DSGVO zur schnellen und sicheren Bereitstellung unserer Webseiten.
+                  Zur schnellen Bereitstellung von Skripten und Gestaltungsstilen verwenden wir CDNs (Tailwind CSS CDN, UNPKG / Cloudflare). Beim Abruf wird Ihre IP-Adresse an die Server der jeweiligen CDN-Anbieter übermittelt (Art. 6 Abs. 1 lit. f DSGVO).
+                </p>
+
+                <h5 className="font-display font-600 text-base text-white/90 pt-2">Hinweis zum Drittlandtransfer &amp; EU-US Data Privacy Framework (DPF)</h5>
+                <p>
+                  Soweit Daten in die USA übertragen werden, erfolgt dies auf Grundlage des <strong>EU-U.S. Data Privacy Frameworks (DPF)</strong>. Die Europäische Kommission hat für das DPF am 10. Juli 2023 einen Angemessenheitsbeschluss gemäß Art. 45 Abs. 1 DSGVO erlassen, der zertifizierten US-Unternehmen (wie Google LLC und Cloudflare, Inc.) ein mit der EU vergleichbares Datenschutzniveau bescheinigt. Zudem wurden mit den Anbietern Standardvertragsklauseln der EU-Kommission (Standard Contractual Clauses – SCC) vereinbart.
                 </p>
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-display font-700 uppercase text-lg text-white">7. Ihre Rechte als betroffene Person</h4>
-                <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+                <h4 className="font-display font-700 uppercase text-lg text-white">11. Ihre Rechte als betroffene Person</h4>
+                <p>Sie haben im Rahmen der DSGVO jederzeit folgende Rechte:</p>
                 <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/70 text-sm">
-                  <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Sie haben das Recht, jederzeit unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten.</li>
-                  <li><strong>Recht auf Berichtigung (Art. 16 DSGVO):</strong> Sie können die Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten Daten verlangen.</li>
-                  <li><strong>Recht auf Löschung (Art. 17 DSGVO):</strong> Sie haben das Recht, die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit nicht gesetzliche Aufbewahrungspflichten entgegenstehen.</li>
-                  <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
-                  <li><strong>Recht auf Datenübertragbarkeit (Art. 20 DSGVO):</strong> Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, in einem gängigen, maschinenlesbaren Format an sich oder an einen Dritten aushändigen zu lassen.</li>
-                  <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Widerspruch einzulegen.</li>
-                  <li><strong>Widerruf Ihrer Einwilligung:</strong> Sie können eine bereits erteilte Einwilligung zur Datenverarbeitung jederzeit für die Zukunft widerrufen.</li>
+                  <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Recht auf unentgeltliche Auskunft über die zu Ihrer Person gespeicherten Daten.</li>
+                  <li><strong>Recht auf Berichtigung (Art. 16 DSGVO):</strong> Recht auf Korrektur unrichtiger oder unvollständiger Daten.</li>
+                  <li><strong>Recht auf Löschung (Art. 17 DSGVO):</strong> Recht auf Löschung („Recht auf Vergessenwerden“), sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
+                  <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Recht auf Einschränkung der Datenverarbeitung.</li>
+                  <li><strong>Recht auf Datenübertragbarkeit (Art. 20 DSGVO):</strong> Recht auf Übermittlung der bereitgestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format.</li>
+                  <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO Widerspruch einzulegen.</li>
+                  <li><strong>Widerruf Ihrer Einwilligung:</strong> Eine erteilte Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden.</li>
                 </ul>
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-display font-700 uppercase text-lg text-white">8. Beschwerderecht bei der zuständigen Aufsichtsbehörde</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">12. Beschwerderecht bei der zuständigen Aufsichtsbehörde</h4>
                 <p>
-                  Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes.
-                </p>
-                <p>
-                  Die für uns zuständige Datenschutzaufsichtsbehörde ist:
+                  Im Falle von datenschutzrechtlichen Verstößen steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu:
                 </p>
                 <p className="text-white/70 text-sm">
                   <strong>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz (LfDI RLP)</strong><br />
                   Hintere Bleiche 34, 55116 Mainz<br />
+                  Telefon: +49 (0) 6131 8920-0<br />
+                  E-Mail: poststelle@datenschutz.rlp.de<br />
                   Website: <a href="https://www.datenschutz.rlp.de" target="_blank" rel="noopener" className="text-court-light underline">www.datenschutz.rlp.de</a>
                 </p>
               </div>
