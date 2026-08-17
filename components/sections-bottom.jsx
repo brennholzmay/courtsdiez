@@ -517,35 +517,128 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
             <div className="space-y-6">
               <h3 className="font-display font-800 uppercase text-2xl text-white">Datenschutzerklärung</h3>
               
-              <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">1. Datenschutz auf einen Blick</h4>
+              <div className="space-y-3 border-l-2 border-court-light pl-4">
+                <h4 className="font-display font-700 uppercase text-lg text-white">1. Verantwortliche Stelle</h4>
                 <p>
-                  Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Nachfolgend informieren wir Sie über die Erhebung und Verarbeitung personenbezogener Daten bei der Nutzung unserer Website <strong>www.courtsdiez.de</strong>.
+                  Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
                 </p>
                 <p>
-                  <strong>Verantwortliche Stelle:</strong><br />
-                  Tennishalle Diez OHG, Am Hallenbad 6, 65582 Diez, E-Mail: info@courtsdiez.de
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">2. Datenerfassung auf unserer Website</h4>
-                <p>
-                  Beim Aufrufen unserer Website werden durch den auf Ihrem Endgerät zum Einsatz kommenden Browser automatisch Informationen an den Server unserer Website gesendet. Diese Informationen werden temporär in einem sog. Server-Logfile gespeichert (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, Name und URL der abgerufenen Datei, verwendeter Browser).
+                  <strong>Tennishalle Diez OHG</strong><br />
+                  Am Hallenbad 6<br />
+                  65582 Diez<br />
+                  Telefon: 06432 - 62204<br />
+                  E-Mail: info@courtsdiez.de<br />
+                  Vertretungsberechtigt: Tobias Dempewolf, Florian Dempewolf, Nikolas Dempewolf
                 </p>
               </div>
 
-              <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">3. Online-Buchungen via Playtomic</h4>
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">2. Allgemeine Hinweise &amp; Rechtsgrundlagen</h4>
                 <p>
-                  Für die Online-Buchung der Padel-Courts binden wir Links und Dienste des Buchungsanbieters Playtomic (Playtomic S.L.) ein. Bei der Nutzung des Buchungssystems verarbeitet Playtomic die zur Abwicklung der Reservierung erforderlichen Daten eigenverantwortlich gemäß deren Datenschutzbestimmungen.
+                  Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+                </p>
+                <p>
+                  Die Verarbeitung personenbezogener Daten auf unserer Website erfolgt auf Basis der Vorgaben der EU-Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG):
+                </p>
+                <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
+                  <li><strong>Art. 6 Abs. 1 lit. a DSGVO:</strong> Die betroffene Person hat ihre Einwilligung zur Verarbeitung der sie betreffenden personenbezogenen Daten für einen oder mehrere bestimmte Zwecke gegeben.</li>
+                  <li><strong>Art. 6 Abs. 1 lit. b DSGVO:</strong> Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich (z. B. Platzbuchung, Anfragen).</li>
+                  <li><strong>Art. 6 Abs. 1 lit. f DSGVO:</strong> Die Verarbeitung ist zur Wahrung unserer berechtigten Interessen erforderlich (z. B. sicherer und stabiler Betrieb der Website, IT-Sicherheit).</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">3. SSL- bzw. TLS-Verschlüsselung</h4>
+                <p>
+                  Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
                 </p>
               </div>
 
-              <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">4. Ihre Rechte als betroffene Person</h4>
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">4. Datenerfassung auf dieser Website</h4>
+                
+                <h5 className="font-display font-600 text-base text-white/90">Server-Log-Dateien</h5>
                 <p>
-                  Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.
+                  Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:
+                </p>
+                <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
+                  <li>Browsertyp und Browserversion</li>
+                  <li>verwendetes Betriebssystem</li>
+                  <li>Referrer URL (die zuvor besuchte Seite)</li>
+                  <li>Hostname des zugreifenden Rechners / IP-Adresse</li>
+                  <li>Uhrzeit und Datum der Serveranfrage</li>
+                </ul>
+                <p>
+                  Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website.
+                </p>
+
+                <h5 className="font-display font-600 text-base text-white/90 pt-2">Cookies &amp; Tracking</h5>
+                <p>
+                  Unsere Website verzichtet auf den Einsatz einwilligungspflichtiger Tracking-, Analyse- oder Marketing-Cookies (wie z. B. Google Analytics oder Facebook Pixel). Es werden ausschließlich technisch notwendige Session-Zustände im Browser verarbeitet, um die Grundfunktionen der Website zu gewährleisten.
+                </p>
+
+                <h5 className="font-display font-600 text-base text-white/90 pt-2">Kontaktaufnahme (Telefon / E-Mail)</h5>
+                <p>
+                  Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Telefonnummer, Anfrage, Reservierungsdaten) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                </p>
+                <p>
+                  Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen (z. B. Platzreservierung) erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">5. Externe Buchungsplattform (Playtomic)</h4>
+                <p>
+                  Für die Buchung und Abrechnung der Padel-Plätze verlinken wir auf das Buchungssystem von <strong>Playtomic</strong> (Playtomic S.L., Calle de Méndez Álvaro, 20, 28045 Madrid, Spanien).
+                </p>
+                <p>
+                  Wenn Sie auf die entsprechenden Buchungs-Buttons klicken, werden Sie direkt auf die Plattform von Playtomic weitergeleitet. Dort gelten die Datenschutzbestimmungen und Nutzungsbedingungen der Playtomic S.L. Die Nutzung erfolgt zur Abwicklung Ihrer Platzbuchung (Art. 6 Abs. 1 lit. b DSGVO).
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">6. Externe Schriften, Bibliotheken &amp; CDNs</h4>
+                
+                <h5 className="font-display font-600 text-base text-white/90">Google Fonts (Web Fonts)</h5>
+                <p>
+                  Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Web Fonts, die von Google bereitgestellt werden (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Aufruf einer Seite lädt Ihr Browser die benötigten Web Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.
+                </p>
+                <p>
+                  Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von Google aufnehmen. Hierdurch erlangt Google Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde. Die Nutzung von Google Fonts erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen und ansprechenden visuellen Darstellung unseres Online-Angebots).
+                </p>
+
+                <h5 className="font-display font-600 text-base text-white/90 pt-2">Content Delivery Networks (CDNs)</h5>
+                <p>
+                  Zur Bereitstellung von Skripten und Gestaltungsstilen verwenden wir Content Delivery Networks (z. B. Tailwind CSS CDN, UNPKG). Beim Abruf dieser Ressourcen wird Ihre IP-Adresse an die jeweiligen Server übermittelt. Dies erfolgt auf Basis von Art. 6 Abs. 1 lit. f DSGVO zur schnellen und sicheren Bereitstellung unserer Webseiten.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">7. Ihre Rechte als betroffene Person</h4>
+                <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+                <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/70 text-sm">
+                  <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Sie haben das Recht, jederzeit unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten.</li>
+                  <li><strong>Recht auf Berichtigung (Art. 16 DSGVO):</strong> Sie können die Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten Daten verlangen.</li>
+                  <li><strong>Recht auf Löschung (Art. 17 DSGVO):</strong> Sie haben das Recht, die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit nicht gesetzliche Aufbewahrungspflichten entgegenstehen.</li>
+                  <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+                  <li><strong>Recht auf Datenübertragbarkeit (Art. 20 DSGVO):</strong> Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, in einem gängigen, maschinenlesbaren Format an sich oder an einen Dritten aushändigen zu lassen.</li>
+                  <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Widerspruch einzulegen.</li>
+                  <li><strong>Widerruf Ihrer Einwilligung:</strong> Sie können eine bereits erteilte Einwilligung zur Datenverarbeitung jederzeit für die Zukunft widerrufen.</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">8. Beschwerderecht bei der zuständigen Aufsichtsbehörde</h4>
+                <p>
+                  Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes.
+                </p>
+                <p>
+                  Die für uns zuständige Datenschutzaufsichtsbehörde ist:
+                </p>
+                <p className="text-white/70 text-sm">
+                  <strong>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz (LfDI RLP)</strong><br />
+                  Hintere Bleiche 34, 55116 Mainz<br />
+                  Website: <a href="https://www.datenschutz.rlp.de" target="_blank" rel="noopener" className="text-court-light underline">www.datenschutz.rlp.de</a>
                 </p>
               </div>
             </div>
