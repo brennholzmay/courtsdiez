@@ -247,7 +247,7 @@ const FAQS = [
   { q: "Wie viele Personen spielen Padel?", a: "Klassisches Padel wird zu viert gespielt, also zwei gegen zwei. Auf dem Single Court kann auch zu zweit gespielt werden." },
   { q: "Kann ich Schläger und Bälle ausleihen?", a: "Leihschläger sind kostenlos vor den Courts verfügbar. Bälle kannst du an unserem Automaten oder an der Infotheke kaufen." },
   { q: "Welche Schuhe soll ich tragen?", a: "Geeignet sind saubere Hallenschuhe, Padel- oder Tennisschuhe mit gutem Halt. Schuhe mit stark verschmutzten oder ungeeigneten Sohlen dürfen die Courts nicht betreten. Auf dem Tennisplatz nur Schuhe mit glatter, heller Sohle tragen." },
-  { q: "Wie lange sollte ich buchen?", a: "Für vier Spieler sind 90 Minuten ein guter Einstieg. Für längere Matches oder Gruppen kann auch eine längere Spielzeit sinnvoll sein." },
+  { q: "Wie lange sollte ich buchen?", a: "Für vier Spieler sind 60 oder 90 Minuten ein guter Einstieg. Für längere Matches oder Gruppen kann auch eine längere Spielzeit von 120 Minuten sinnvoll sein." },
   { q: "Kann ich meine Buchung stornieren?", a: "Eine kostenfreie Stornierung deiner Platzbuchung ist bis 24 Stunden vor Spielbeginn möglich. Bei einer späteren Stornierung oder Nichterscheinen wird der volle Buchungsbetrag berechnet." },
   { q: "Was passiert, wenn ich zu spät komme?", a: "Die Buchungszeit beginnt zum reservierten Zeitpunkt. Bei verspäteter Ankunft verlängert sich die Spielzeit nicht." },
   { q: "Gibt es Umkleiden und Duschen?", a: "Ja, bei Courts Diez stehen euch moderne Umkleiden und Duschen zur Verfügung." },
@@ -483,7 +483,7 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
               <div className="space-y-3 border-l-2 border-court-light pl-4">
                 <h4 className="font-display font-700 uppercase text-lg text-white">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</h4>
                 <p>
-                  <strong>Courts Diez</strong><br />
+                  <strong>Tennishalle Diez OHG</strong><br />
                   Am Hallenbad 6<br />
                   65582 Diez
                 </p>
@@ -500,12 +500,7 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
 
               <div className="space-y-2">
                 <h4 className="font-display font-700 uppercase text-lg text-white">Vertretungsberechtigt</h4>
-                <p>Courts Diez Geschäftsführung</p>
-              </div>
-
-              <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">Umsatzsteuer-ID</h4>
-                <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: [Wird bei Bedarf eingetragen]</p>
+                <p>Tobias Dempewolf, Florian Dempewolf, Nikolas Dempewolf</p>
               </div>
 
               <div className="space-y-2">
@@ -529,7 +524,7 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
                 </p>
                 <p>
                   <strong>Verantwortliche Stelle:</strong><br />
-                  Courts Diez, Am Hallenbad 6, 65582 Diez, E-Mail: info@courtsdiez.de
+                  Tennishalle Diez OHG, Am Hallenbad 6, 65582 Diez, E-Mail: info@courtsdiez.de
                 </p>
               </div>
 
