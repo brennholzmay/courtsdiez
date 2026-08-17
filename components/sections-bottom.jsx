@@ -248,7 +248,7 @@ const FAQS = [
   { q: "Kann ich Schläger und Bälle ausleihen?", a: "Leihschläger sind kostenlos vor den Courts verfügbar. Bälle kannst du an unserem Automaten oder an der Infotheke kaufen." },
   { q: "Welche Schuhe soll ich tragen?", a: "Geeignet sind saubere Hallenschuhe, Padel- oder Tennisschuhe mit gutem Halt. Schuhe mit stark verschmutzten oder ungeeigneten Sohlen dürfen die Courts nicht betreten. Auf dem Tennisplatz nur Schuhe mit glatter, heller Sohle tragen." },
   { q: "Wie lange sollte ich buchen?", a: "Für vier Spieler sind 90 Minuten ein guter Einstieg. Für längere Matches oder Gruppen kann auch eine längere Spielzeit sinnvoll sein." },
-  { q: "Kann ich meine Buchung stornieren?", a: "Eine Stornierung ist nach euren jeweiligen Bedingungen möglich. Hier sollte eure konkrete Stornierungsfrist stehen, zum Beispiel bis 24 Stunden vor Spielbeginn." },
+  { q: "Kann ich meine Buchung stornieren?", a: "Eine kostenfreie Stornierung deiner Platzbuchung ist bis 24 Stunden vor Spielbeginn möglich. Bei einer späteren Stornierung oder Nichterscheinen wird der volle Buchungsbetrag berechnet." },
   { q: "Was passiert, wenn ich zu spät komme?", a: "Die Buchungszeit beginnt zum reservierten Zeitpunkt. Bei verspäteter Ankunft verlängert sich die Spielzeit nicht." },
   { q: "Gibt es Umkleiden und Duschen?", a: "Ja, bei Courts Diez stehen euch moderne Umkleiden und Duschen zur Verfügung." },
   { q: "Kann ich als Anfänger direkt buchen?", a: "Ja. Padel ist leicht zugänglich und du kannst direkt loslegen. Für einen besseren Einstieg könnt ihr zusätzlich ein Probetraining oder eine Einführung anbieten." },

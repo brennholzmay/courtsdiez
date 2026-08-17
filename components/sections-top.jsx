@@ -163,11 +163,6 @@ function Courts({ ui }) {
           {/* PADEL — featured */}
           <Reveal className="lg:col-span-3">
             <div className={`group relative h-full ${ui.card} bg-anthra-800 border border-court/30 glow-blue overflow-hidden`}>
-              <div className="absolute top-5 left-5 z-10">
-                <span className="inline-flex items-center gap-2 rounded-full bg-court px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-white">
-                  <span className="h-1.5 w-1.5 rounded-full bg-ball animate-pulse" /> Hauptattraktion
-                </span>
-              </div>
               <ImageSlot src="assets/img/padel-court.png" alt="Padel-Court mit Panorama-Glaswänden" ratio="16/9" objectPos="center 35%" className="border-b border-white/10" />
               <div className="p-7 sm:p-9">
                 <div className="flex items-baseline gap-3">
