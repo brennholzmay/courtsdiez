@@ -403,24 +403,33 @@ function Contact({ ui }) {
             </Reveal>
           </div>
 
-          {/* right: map placeholder */}
-          <Reveal delay={120}>
-            <div className={`relative h-full min-h-[340px] ${card} overflow-hidden border border-white/10`}>
-              <ImageSlot src="assets/img/map-diez.png" alt="Karte / Anfahrt – Standort Diez" ratio="auto" className="!h-full" />
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <span className="relative flex h-4 w-4">
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-court-light opacity-60 animate-ping" />
-                  <span className="relative inline-flex h-4 w-4 rounded-full bg-court border-2 border-white" />
-                </span>
-              </div>
-              <div className="absolute bottom-5 left-5 right-5">
-                <div className="rounded-xl bg-anthra-950/80 backdrop-blur border border-white/10 px-5 py-4 flex items-center justify-between gap-3">
-                  <div>
-                    <div className="font-display font-700 uppercase tracking-wide text-white">Courts Diez</div>
-                    <div className="text-white/55 text-sm">Am Hallenbad 6 · 65582 Diez</div>
-                  </div>
-                  <Btn href="https://maps.google.com" external variant="soft" radius={ui.btn} className="!px-5 !py-2.5 !text-[13px] shrink-0">Route</Btn>
+          {/* right: interactive Google Maps */}
+          <Reveal delay={120} className="h-full">
+            <div className={`relative h-full min-h-[420px] ${card} overflow-hidden border border-white/10 flex flex-col bg-anthra-950`}>
+              <iframe
+                title="Standort Courts Diez - Am Hallenbad 6, 65582 Diez"
+                src="https://maps.google.com/maps?q=Am+Hallenbad+6,+65582+Diez&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full min-h-[350px] flex-1 border-0"
+                style={{ filter: 'grayscale(20%) contrast(1.05)' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="p-4 sm:p-5 bg-anthra-950/95 backdrop-blur border-t border-white/10 flex flex-wrap items-center justify-between gap-3 shrink-0">
+                <div>
+                  <div className="font-display font-700 uppercase tracking-wide text-white text-base">Courts Diez</div>
+                  <div className="text-white/60 text-xs sm:text-sm font-mono mt-0.5">Am Hallenbad 6 · 65582 Diez</div>
                 </div>
+                <Btn
+                  href="https://www.google.com/maps/dir/?api=1&destination=Am+Hallenbad+6,+65582+Diez"
+                  external
+                  variant="primary"
+                  accent="court"
+                  radius={ui.btn}
+                  className="!px-5 !py-2.5 !text-xs uppercase tracking-wider font-bold shrink-0"
+                >
+                  <Icon.pin width="14" /> Route planen <Icon.arrow width="14" />
+                </Btn>
               </div>
             </div>
           </Reveal>
