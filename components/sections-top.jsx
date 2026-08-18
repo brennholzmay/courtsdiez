@@ -8,7 +8,7 @@ const NAV = [
   { id: 'kontakt', label: 'Kontakt' },
 ];
 
-function Nav({ ui }) {
+function Nav({ ui, onOpenBooking }) {
   const [scrolled, setScrolled] = useStateT(false);
   const [open, setOpen] = useStateT(false);
   useEffectT(() => {
@@ -32,7 +32,7 @@ function Nav({ ui }) {
             ))}
           </nav>
           <div className="hidden md:block">
-            <Btn href="#courts" variant="primary" accent={ui.primaryAccent} radius={ui.btn} className="!px-6 !py-3 !text-[14px]">
+            <Btn onClick={onOpenBooking} variant="primary" accent={ui.primaryAccent} radius={ui.btn} className="!px-6 !py-3 !text-[14px]">
               Court buchen <Icon.arrow width="17" className="transition-transform group-hover:translate-x-0.5" />
             </Btn>
           </div>
@@ -57,7 +57,7 @@ function Nav({ ui }) {
               </a>
             ))}
           </div>
-          <Btn href="#courts" onClick={() => setOpen(false)} variant="primary" accent={ui.primaryAccent} radius={ui.btn} className="mt-8 w-full">
+          <Btn onClick={() => { setOpen(false); onOpenBooking && onOpenBooking(); }} variant="primary" accent={ui.primaryAccent} radius={ui.btn} className="mt-8 w-full">
             Court buchen <Icon.arrow width="17" />
           </Btn>
         </div>
@@ -66,12 +66,12 @@ function Nav({ ui }) {
   );
 }
 
-function Hero({ ui }) {
+function Hero({ ui, onOpenBooking }) {
   const stats = [
     { n: 4, s: '', label: 'Padel-Courts' },
     { n: 1, s: '', label: 'Tennisplatz' },
     { n: 7, s: '', label: 'Tage / Woche' },
-    { n: 24, s: ' Uhr', label: 'Indoor bis' },
+    { n: 0, s: ' €', label: 'Leih-Equipment inkl.' },
   ];
   return (
     <section id="top" className="relative min-h-[100svh] flex flex-col overflow-hidden">
@@ -101,8 +101,8 @@ function Hero({ ui }) {
           </Reveal>
           <Reveal delay={240}>
             <div className="mt-9 flex flex-col sm:flex-row gap-4 sm:items-center">
-              <Btn href="#courts" variant="primary" accent={ui.heroAccent} radius={ui.btn} className="!text-base">
-                Jetzt Padel-Court buchen <Icon.arrow width="18" className="transition-transform group-hover:translate-x-1" />
+              <Btn onClick={onOpenBooking} variant="primary" accent={ui.heroAccent} radius={ui.btn} className="!text-base">
+                Jetzt Court buchen <Icon.arrow width="18" className="transition-transform group-hover:translate-x-1" />
               </Btn>
               <Btn href="#courts" variant="ghost" radius={ui.btn} className="!text-base">Courts entdecken</Btn>
             </div>
@@ -170,7 +170,7 @@ function Courts({ ui }) {
                   <h3 className="font-display font-800 uppercase text-3xl sm:text-4xl">Padel-Court</h3>
                 </div>
                 <p className="mt-4 text-white/70 text-[15px] leading-relaxed max-w-lg">
-                  Vier moderne Manzasport Indoorcourts mit Flutlicht. Perfekt für ein schnelles Match bei uns bereits ab 6:00 Uhr – 24:00 Uhr möglich.
+                  Vier moderne Manzasport Indoorcourts mit Flutlicht. Täglich geöffnet – flexibel online über Playtomic buchbar.
                 </p>
                 <div className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-2.5">
                   <FeatureRow items={['Ein Panorama Court', '2 Doppel Courts']} />

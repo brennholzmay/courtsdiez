@@ -16,6 +16,7 @@ const FONTS = {
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [legalTab, setLegalTab] = React.useState(null);
+  const [bookingOpen, setBookingOpen] = React.useState(false);
 
   React.useEffect(() => {
     const f = FONTS[t.font] || FONTS['Saira (sportlich)'];
@@ -29,6 +30,8 @@ function App() {
       const hash = window.location.hash.replace('#', '').toLowerCase();
       if (['impressum', 'datenschutz', 'agb'].includes(hash)) {
         setLegalTab(hash);
+      } else if (hash === 'buchen') {
+        setBookingOpen(true);
       }
     };
     checkHash();
@@ -48,15 +51,25 @@ function App() {
 
   return (
     <div>
-      <Nav ui={ui} />
+      <Nav ui={ui} onOpenBooking={() => setBookingOpen(true)} />
       <main>
-        <Hero ui={ui} />
+        <Hero ui={ui} onOpenBooking={() => setBookingOpen(true)} />
         <Courts ui={ui} />
         <Rules ui={ui} />
         <Faq ui={ui} />
         <Contact ui={ui} />
       </main>
-      <Footer ui={ui} onOpenLegal={(tab) => setLegalTab(tab)} />
+      <Footer
+        ui={ui}
+        onOpenLegal={(tab) => setLegalTab(tab)}
+        onOpenBooking={() => setBookingOpen(true)}
+      />
+
+      <BookingModal
+        isOpen={bookingOpen}
+        onClose={() => setBookingOpen(false)}
+        ui={ui}
+      />
 
       <LegalModal
         activeTab={legalTab}

@@ -316,7 +316,11 @@ function Faq({ ui }) {
 
 function Contact({ ui }) {
   const hours = [
-    ['Montag – Sonntag', '06:00 – 24:00 Uhr'],
+    ['Montag – Mittwoch', '06:00 – 22:00 Uhr'],
+    ['Donnerstag', '06:00 – 23:00 Uhr'],
+    ['Freitag', '06:00 – 24:00 Uhr'],
+    ['Samstag', '08:00 – 24:00 Uhr'],
+    ['Sonntag', '08:00 – 22:00 Uhr'],
   ];
   const card = ui.card === 'rounded-none' ? 'rounded-none' : 'rounded-2xl';
   return (
@@ -815,7 +819,7 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
               <div className="space-y-2">
                 <h4 className="font-display font-700 uppercase text-lg text-white">7. Hausordnung, Sicherheit &amp; Sauberkeit</h4>
                 <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
-                  <li><strong>Öffnungszeiten:</strong> Die Anlage ist täglich von 06:00 bis 24:00 Uhr geöffnet.</li>
+                  <li><strong>Öffnungszeiten:</strong> Mo–Mi 06:00–22:00 Uhr, Do 06:00–23:00 Uhr, Fr 06:00–24:00 Uhr, Sa 08:00–24:00 Uhr, So 08:00–22:00 Uhr.</li>
                   <li><strong>Rauchverbot:</strong> Im gesamten Gebäude gilt ein striktes Rauch- und Dampfverbot (inkl. E-Zigaretten und Vapes).</li>
                   <li><strong>Getränke &amp; Speisen:</strong> Auf den Spielfeldern sind nur bruchsichere Trinkflaschen gestattet. <strong>Glasflaschen sind auf den Courts streng verboten.</strong> Der Verzehr von Speisen ist nur im Aufenthalts-/Loungebereich gestattet.</li>
                   <li><strong>Tiere:</strong> Das Mitführen von Tieren in den Hallen- und Courtbereich ist nicht gestattet.</li>
@@ -867,7 +871,137 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
   );
 }
 
-function Footer({ ui, onOpenLegal }) {
+function BookingModal({ isOpen, onClose, ui }) {
+  if (!isOpen) return null;
+
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
+  const cardClass = ui.card === 'rounded-none' ? 'rounded-none' : 'rounded-2xl';
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+      {/* backdrop */}
+      <div className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity" onClick={onClose} />
+
+      {/* modal card */}
+      <div className={`relative w-full max-w-4xl flex flex-col bg-anthra-900 border border-white/15 shadow-2xl overflow-hidden ${cardClass} z-10 my-auto`}>
+        {/* header */}
+        <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-anthra-950/80 shrink-0">
+          <div className="flex items-center gap-3">
+            <span className="h-2.5 w-2.5 rounded-full bg-ball animate-pulse" />
+            <span className="font-display font-800 uppercase tracking-wide text-xl sm:text-2xl text-white">Court buchen</span>
+          </div>
+          <button onClick={onClose} className="p-2 text-white/60 hover:text-white transition-colors" aria-label="Schließen">
+            <Icon.close width="24" />
+          </button>
+        </div>
+
+        {/* content grid: 2 columns */}
+        <div className="p-6 sm:p-8 grid md:grid-cols-2 gap-6 bg-anthra-900">
+          {/* Padel Card */}
+          <div className={`flex flex-col justify-between ${cardClass} border border-court/40 bg-court/10 p-6 sm:p-7 relative overflow-hidden`}>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-court/15 rounded-full blur-2xl pointer-events-none" />
+            <div>
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-court-light font-semibold">4× Indoor Courts</span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-court/20 text-court-light font-mono text-[11px] uppercase tracking-wider">
+                  <span className="h-1.5 w-1.5 rounded-full bg-court-light" /> Live-Buchung
+                </span>
+              </div>
+              <h3 className="mt-3 font-display font-900 uppercase text-3xl text-white tracking-tight">Padel</h3>
+              <p className="mt-2.5 text-white/75 text-sm sm:text-[15px] leading-relaxed">
+                Buche deinen Padel-Court schnell und einfach online über Playtomic. Freie Spielzeiten siehst du in Echtzeit.
+              </p>
+              
+              <div className="mt-5 pt-4 border-t border-white/10 space-y-2 text-xs text-white/70 font-mono">
+                <div className="flex items-center gap-2">
+                  <span className="text-court-light font-bold">✓</span>
+                  <span>Kostenlose Leihschläger &amp; Bälle inklusive</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-court-light font-bold">✓</span>
+                  <span>Sofortige Buchungsbestätigung</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-2">
+              <Btn href="https://playtomic.io" external variant="primary" accent="court" radius={ui.btn} className="w-full !py-3.5 !text-base shadow-lg shadow-court/20">
+                <Icon.app width="18" /> Über Playtomic buchen <Icon.arrow width="16" />
+              </Btn>
+            </div>
+          </div>
+
+          {/* Tennis Card */}
+          <div className={`flex flex-col justify-between ${cardClass} border border-ball/40 bg-ball/[0.07] p-6 sm:p-7 relative overflow-hidden`}>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-ball/10 rounded-full blur-2xl pointer-events-none" />
+            <div>
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ball font-semibold">1× Teppichplatz</span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-ball/15 text-ball font-mono text-[11px] uppercase tracking-wider">
+                  Direktreservierung
+                </span>
+              </div>
+              <h3 className="mt-3 font-display font-900 uppercase text-3xl text-white tracking-tight">Tennis</h3>
+              <p className="mt-2.5 text-white/75 text-sm sm:text-[15px] leading-relaxed">
+                Reserviere deine Einzelstunde oder dein Wintersaison-Abonnement direkt bei uns per E-Mail oder Telefon.
+              </p>
+
+              <div className="mt-5 pt-4 border-t border-white/10 space-y-2 text-xs text-white/70 font-mono">
+                <div className="flex items-center gap-2">
+                  <span className="text-ball font-bold">✓</span>
+                  <span>Rebound Ace Teppichboden (glatte Hallenschuhe)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-ball font-bold">✓</span>
+                  <span>Einzelstunden &amp; Saison-Abos</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 space-y-3 pt-2">
+              <Btn href="mailto:info@courtsdiez.de?subject=Buchungsanfrage%20Tennisplatz%20Courts%20Diez" variant="primary" accent="ball" radius={ui.btn} className="w-full !py-3.5 !text-base shadow-lg shadow-ball/10">
+                <Icon.mail width="18" /> Per E-Mail anfragen
+              </Btn>
+              
+              <a
+                href="tel:+49643262204"
+                className={`flex items-center justify-between px-4 py-3 bg-anthra-950/70 hover:bg-anthra-950 border border-white/10 hover:border-ball/50 transition-all ${cardClass} text-white group`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-lg bg-ball/20 text-ball flex items-center justify-center shrink-0 group-hover:bg-ball group-hover:text-anthra-950 transition-colors">
+                    <Icon.phone width="16" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] font-mono uppercase tracking-wider text-white/50">Telefonisch reservieren</div>
+                    <div className="font-display font-800 text-lg leading-tight text-white group-hover:text-ball transition-colors">06432 - 62204</div>
+                  </div>
+                </div>
+                <span className="text-white/40 group-hover:text-ball group-hover:translate-x-0.5 transition-all"><Icon.arrow width="18" /></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* footer inside modal */}
+        <div className="px-6 py-4 border-t border-white/10 bg-anthra-950/90 flex items-center justify-between shrink-0">
+          <span className="font-mono text-xs text-white/40">Courts Diez · Am Hallenbad 6, 65582 Diez</span>
+          <Btn onClick={onClose} variant="soft" radius={ui.btn} className="!px-6 !py-2 !text-sm">
+            Schließen
+          </Btn>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Footer({ ui, onOpenLegal, onOpenBooking }) {
   return (
     <footer className="relative bg-anthra-950 border-t border-white/10">
       {/* CTA band */}
@@ -882,8 +1016,8 @@ function Footer({ ui, onOpenLegal }) {
           </Reveal>
           <Reveal delay={100}>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Btn href="https://playtomic.io" external variant="primary" accent={ui.heroAccent} radius={ui.btn} className="!text-base">
-                <Icon.app width="18" /> Padel über Playtomic buchen
+              <Btn onClick={onOpenBooking} variant="primary" accent={ui.heroAccent} radius={ui.btn} className="!text-base">
+                <Icon.app width="18" /> Court jetzt buchen <Icon.arrow width="16" />
               </Btn>
               <Btn href="tel:+49643262204" variant="ghost" radius={ui.btn} className="!text-base">
                 <Icon.phone width="17" /> Tennis: 06432 - 62204
@@ -935,4 +1069,4 @@ function Footer({ ui, onOpenLegal }) {
   );
 }
 
-Object.assign(window, { Rules, Faq, Contact, LegalModal, Footer });
+Object.assign(window, { Rules, Faq, Contact, LegalModal, BookingModal, Footer });
