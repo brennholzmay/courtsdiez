@@ -245,7 +245,7 @@ const FAQS = [
   { q: "Wie buche ich einen Court?", a: "Die Buchung erfolgt online über euer Buchungssystem. Dort wählst du den gewünschten Court, die Uhrzeit und die Spieldauer aus. Anschließend erhältst du eine Buchungsbestätigung." },
   { q: "Muss ich Mitglied sein?", a: "Nein. Bei Courts Diez kannst du einen Court auch ohne Vereins- oder Clubmitgliedschaft buchen." },
   { q: "Wie viele Personen spielen Padel?", a: "Klassisches Padel wird zu viert gespielt, also zwei gegen zwei. Auf dem Single Court kann auch zu zweit gespielt werden." },
-  { q: "Kann ich Schläger und Bälle ausleihen?", a: "Leihschläger sind kostenlos vor den Courts verfügbar. Bälle kannst du an unserem Automaten oder an der Infotheke kaufen." },
+  { q: "Kann ich Schläger und Bälle ausleihen?", a: "Padel-Leihschläger stehen kostenlos vor den Courts zur Verfügung. Padelbälle kannst du an unserem Automaten oder an der Infotheke kaufen. Für den Tennisplatz ist eigenes Equipment mitzubringen." },
   { q: "Welche Schuhe soll ich tragen?", a: "Geeignet sind saubere Hallenschuhe, Padel- oder Tennisschuhe mit gutem Halt. Schuhe mit stark verschmutzten oder ungeeigneten Sohlen dürfen die Courts nicht betreten. Auf dem Tennisplatz nur Schuhe mit glatter, heller Sohle tragen." },
   { q: "Wie lange sollte ich buchen?", a: "Für vier Spieler sind 60 oder 90 Minuten ein guter Einstieg. Für längere Matches oder Gruppen kann auch eine längere Spielzeit von 120 Minuten sinnvoll sein." },
   { q: "Kann ich meine Buchung stornieren?", a: "Eine kostenfreie Stornierung deiner Platzbuchung ist bis 24 Stunden vor Spielbeginn möglich. Bei einer späteren Stornierung oder Nichterscheinen wird der volle Buchungsbetrag berechnet." },
@@ -255,7 +255,7 @@ const FAQS = [
   { q: "Dürfen Kinder und Jugendliche spielen?", a: "Ja, Padel und Tennis sind auch für Kinder und Jugendliche geeignet. Je nach Alter sollte eine erwachsene Aufsichtsperson dabei sein." },
   { q: "Kann ich ein Event oder eine Firmenveranstaltung buchen?", a: "Ja. Courts Diez eignet sich für Firmenveranstaltungen, Geburtstage, Gruppenangebote und Turniere. Dafür kann ein individuelles Angebot erstellt werden." },
   { q: "Brauche ich Vorkenntnisse für Padel?", a: "Nein. Padel ist sehr einsteigerfreundlich und bereits nach kurzer Erklärung gut spielbar." },
-  { q: "Was soll ich zu meinem ersten Termin mitbringen?", a: "Bequeme Sportkleidung, saubere Sportschuhe und etwas zu trinken. Schläger und Bälle können je nach Angebot vor Ort ausgeliehen werden." },
+  { q: "Was soll ich zu meinem ersten Termin mitbringen?", a: "Bequeme Sportkleidung, saubere Sportschuhe und etwas zu trinken. Padel-Leihschläger stehen vor Ort kostenlos bereit; für Tennis bitte eigene Schläger mitbringen." },
   { q: "Wie früh sollte ich vor meiner Buchung da sein?", a: "Am besten bist du etwa 10 bis 15 Minuten vor Spielbeginn vor Ort. So bleibt genug Zeit zum Umziehen und zur Vorbereitung." },
   { q: "Gibt es Parkplätze?", a: "Ja, direkt vor der Halle." },
   { q: "Kann ich Getränke oder Snacks kaufen?", a: "Ja, an unserem Automaten oder an der Infotheke." },
@@ -807,9 +807,9 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
               </div>
 
               <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">6. Kostenloses Leihmaterial &amp; Equipment</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">6. Kostenloses Leihmaterial (Padel)</h4>
                 <p>
-                  Leihschläger und Bälle werden den Nutzern vor Ort kostenfrei zur Verfügung gestellt. Das Material ist pfleglich zu behandeln und darf ausschließlich während der gebuchten Spielzeit <strong>innerhalb der Halle</strong> genutzt werden.
+                  Für die Nutzung der Padel-Courts werden Padel-Leihschläger vor Ort kostenfrei zur Verfügung gestellt. Für den Tennisplatz ist eigenes Equipment (Schläger und Bälle) mitzubringen. Das Leihmaterial ist pfleglich zu behandeln und darf ausschließlich während der gebuchten Spielzeit <strong>innerhalb der Halle</strong> genutzt werden.
                 </p>
                 <p>
                   Nach Spielende ist das gesamte Leihmaterial vollständig an die dafür vorgesehenen Stationen zurückzulegen. Bei vorsätzlicher Beschädigung (z. B. Schlagen des Schlägers gegen Glaswände, Gitter oder Einrichtungsgegenstände) oder Verlust/Entwendung haftet der Nutzer auf Ersatz des Wiederbeschaffungswerts.
@@ -922,7 +922,7 @@ function BookingModal({ isOpen, onClose, ui }) {
               <div className="mt-5 pt-4 border-t border-white/10 space-y-2 text-xs text-white/70 font-mono">
                 <div className="flex items-center gap-2">
                   <span className="text-court-light font-bold">✓</span>
-                  <span>Kostenlose Leihschläger &amp; Bälle inklusive</span>
+                  <span>Kostenlose Padel-Leihschläger inklusive</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-court-light font-bold">✓</span>
@@ -960,7 +960,7 @@ function BookingModal({ isOpen, onClose, ui }) {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-ball font-bold">✓</span>
-                  <span>Einzelstunden &amp; Saison-Abos</span>
+                  <span>Eigenes Tennis-Equipment (Schläger &amp; Bälle)</span>
                 </div>
               </div>
             </div>

@@ -71,7 +71,7 @@ function Hero({ ui, onOpenBooking }) {
     { n: 4, s: '', label: 'Padel-Courts' },
     { n: 1, s: '', label: 'Tennisplatz' },
     { n: 7, s: '', label: 'Tage / Woche' },
-    { n: 0, s: ' €', label: 'Leih-Equipment inkl.' },
+    { n: 0, s: ' €', label: 'Padel-Schläger inkl.' },
   ];
   return (
     <section id="top" className="relative min-h-[100svh] flex flex-col overflow-hidden">
