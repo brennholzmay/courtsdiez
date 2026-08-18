@@ -504,6 +504,14 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
               </div>
 
               <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">Umsatzsteuer-ID</h4>
+                <p>
+                  Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+                  <strong>DE148388845</strong>
+                </p>
+              </div>
+
+              <div className="space-y-2">
                 <h4 className="font-display font-700 uppercase text-lg text-white">EU-Streitschlichtung &amp; Verbraucherstreitbeilegung</h4>
                 <p>
                   Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener" className="text-court-light underline">https://ec.europa.eu/consumers/odr/</a>.<br />
