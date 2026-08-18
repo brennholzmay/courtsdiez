@@ -85,31 +85,33 @@ function Hero({ ui, onOpenBooking }) {
       <div className="absolute -left-20 bottom-1/3 h-72 w-72 rounded-full bg-ball/10 blur-[120px]" />
 
       {/* content */}
-      <div className="relative z-10 flex-1 flex items-end">
-        <div className="mx-auto max-w-7xl w-full px-5 sm:px-8 pb-12 pt-32">
+      <div className="relative z-10 flex-1 flex items-center">
+        <div className="mx-auto max-w-7xl w-full px-5 sm:px-8 pt-28 sm:pt-36 pb-12 sm:pb-16">
           <Reveal>
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ball/20 border border-ball/50 text-ball font-mono text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg shadow-ball/10">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-ball opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-ball" />
+            <div className="inline-flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 p-2 sm:p-2.5 pr-4 sm:pr-6 bg-anthra-900/90 backdrop-blur-md border-2 border-ball shadow-[0_0_35px_rgba(235,255,0,0.25)]">
+              <div className="flex items-center gap-2.5 px-3.5 py-1.5 bg-ball text-anthra-950 font-display font-900 text-sm uppercase tracking-wider">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-anthra-950 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-anthra-950" />
                 </span>
-                🎉 Grand Opening · 12.09.2026
-              </span>
-              <span className="font-mono text-xs uppercase tracking-widest text-white/60 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full hidden sm:inline-block">
-                Eröffnungsparty &amp; Show-Matches
-              </span>
+                <span>🎉 12. Sept 2026</span>
+              </div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-white">
+                <span className="font-display font-800 uppercase tracking-wide text-base sm:text-lg text-white">Grand Opening Party</span>
+                <span className="hidden sm:inline-block text-white/30">|</span>
+                <span className="font-mono text-xs uppercase tracking-wider text-white/70">Show-Matches · Drinks · Courts ab sofort vorab buchbar</span>
+              </div>
             </div>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="mt-6 font-display font-900 uppercase leading-[0.9] tracking-[-0.01em] text-[clamp(3.2rem,9vw,8.5rem)]">
+            <h1 className="mt-8 font-display font-900 uppercase leading-[0.9] tracking-[-0.01em] text-[clamp(3.2rem,9vw,8.5rem)]">
               MORE THAN<br />
               <span className="text-ball">A COURT</span>
             </h1>
           </Reveal>
           <Reveal delay={160}>
-            <p className="mt-7 max-w-2xl text-lg sm:text-xl text-white/75 leading-relaxed">
-              Am <strong className="text-white font-bold">12. September 2026</strong> feiern wir unser <span className="text-ball font-semibold">Grand Opening mit Eröffnungsparty</span>! Vier moderne Padel-Courts und ein Tennisplatz – sichere dir jetzt schon vorab deinen Court zum Start.
+            <p className="mt-7 max-w-2xl text-lg sm:text-xl text-white/80 leading-relaxed">
+              Am <strong className="text-white font-bold underline decoration-ball decoration-2 underline-offset-4">12. September 2026</strong> feiern wir unser großes <span className="text-ball font-semibold">Grand Opening mit Party &amp; Rahmenprogramm</span>! Vier moderne Padel-Courts und ein Tennisplatz – sichere dir jetzt schon deinen Court zum Start.
             </p>
           </Reveal>
           <Reveal delay={240}>
