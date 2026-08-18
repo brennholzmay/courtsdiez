@@ -729,40 +729,119 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
 
           {activeTab === 'agb' && (
             <div className="space-y-6">
-              <h3 className="font-display font-800 uppercase text-2xl text-white">AGB &amp; Platzordnung</h3>
+              <h3 className="font-display font-800 uppercase text-2xl text-white">Allgemeine Geschäftsbedingungen (AGB) &amp; Platzordnung</h3>
 
               <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">1. Geltungsbereich &amp; Vertragsgegenstand</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">1. Geltungsbereich &amp; Betreiber</h4>
                 <p>
-                  Diese Allgemeinen Geschäftsbedingungen und die Haus- und Platzordnung gelten für sämtliche Nutzungen der Padel-Courts und des Tennisplatzes von Courts Diez (Am Hallenbad 6, 65582 Diez).
+                  Diese Allgemeinen Geschäftsbedingungen (AGB) und die Haus- und Platzordnung gelten für sämtliche Nutzungen der Padel-Courts und des Tennisplatzes sowie für den Aufenthalt auf der gesamten Sportanlage von <strong>Courts Diez</strong> (Betreiber: <strong>Tennishalle Diez OHG</strong>, Am Hallenbad 6, 65582 Diez).
+                </p>
+                <p>
+                  Mit dem Betreten der Anlage, der Buchung eines Platzes oder dem Abschluss eines Abonnements erkennt der Nutzer diese AGB und die Platzordnung verbindlich an.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">2. Buchungs- &amp; Stornierungsbedingungen</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">2. Buchungssysteme &amp; Vertragsschluss</h4>
                 <p>
-                  Padel-Courts werden online über das Buchungssystem Playtomic gebucht. Tennisplätze werden telefonisch unter 06432 - 62204 reserviert. Eine Stornierung richtet sich nach den bei der Buchung angegebenen Fristen (in der Regel bis 24 Stunden vor Spielbeginn). Die Spielzeit beginnt exakt zum reservierten Zeitpunkt. Bei verspätetem Eintreffen besteht kein Anspruch auf Verlängerung.
+                  <strong>a) Padel-Courts (Drittanbieter Playtomic):</strong><br />
+                  Die Buchung, Bezahlung und Stornierung der Padel-Courts erfolgt ausschließlich über die externe Buchungsplattform von <strong>Playtomic</strong> (Playtomic S.L.). Für den Buchungs- und Zahlungsvorgang gelten ergänzend die AGB und Stornobedingungen von Playtomic. Die Nutzung der Plätze vor Ort richtet sich nach unserer Haus- und Platzordnung.
+                </p>
+                <p>
+                  <strong>b) Tennisplatz (Direktbuchung):</strong><br />
+                  Einzelstunden für den Tennisplatz werden telefonisch (06432 - 62204) oder per E-Mail reserviert. Der Vertrag kommt mit unserer mündlichen oder schriftlichen Buchungsbestätigung zustande.
+                </p>
+                <p>
+                  <strong>c) Gesetzlicher Ausschluss des Widerrufsrechts (§ 312g Abs. 2 Nr. 9 BGB):</strong><br />
+                  Bei der Buchung von Sport- und Freizeitdienstleistungen zu einem spezifischen Termin oder Zeitraum besteht gemäß § 312g Abs. 2 Nr. 9 BGB kein gesetzliches 14-tägiges Widerrufsrecht für Verbraucher.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">3. Nutzung der Anlage &amp; Schuhordnung</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">3. Preise, Zahlungsbedingungen &amp; Abonnements (Tennis)</h4>
                 <p>
-                  Die Courts dürfen ausschließlich mit sauberen, sportgerechten Hallenschuhen betreten werden. Auf dem Teppichboden-Tennisplatz sind ausschließlich Schuhe mit glatter, heller Sohle gestattet. Das Betreten der Courts mit stark verschmutzten Straßenschuhen ist ausdrücklich untersagt.
+                  Alle angegebenen Preise verstehen sich in Euro inklusive der jeweils gültigen gesetzlichen Mehrwertsteuer.
+                </p>
+                <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
+                  <li><strong>Tennis-Einzelstunden:</strong> Die Bezahlung erfolgt vor Spielantritt vor Ort in bar oder per EC-/Kreditkarte.</li>
+                  <li><strong>Tennis-Abonnements (Wintersaison):</strong> Abonnements gelten für den festen Zeitraum vom <strong>01.10. bis 30.04.</strong> und werden im Voraus per Rechnung/Banküberweisung beglichen. Vom <strong>01.05. bis 30.09.</strong> werden ausschließlich Einzelstunden vergeben.</li>
+                  <li><strong>Keine Nachholstunden:</strong> Vom Kunden versäumte oder nicht wahrgenommene Abo-Stunden (z. B. durch Krankheit oder Urlaub) verfallen ersatzlos. Ein Anspruch auf Nachholstunden, Rückvergütung oder Übertrag in eine Folgesaison besteht nicht.</li>
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">4. Stornierungsbedingungen &amp; Spielbetrieb (Tennis)</h4>
+                <p>
+                  Eine kostenfreie Stornierung von telefonisch oder per E-Mail gebuchten Tennis-Einzelstunden ist bis spätestens <strong>24 Stunden vor Spielbeginn</strong> möglich.
+                </p>
+                <p>
+                  Bei verspäteter Absage oder Nichterscheinen (No-Show) bleibt der volle Mietpreis zur Zahlung fällig, es sei denn, die Stunde kann kurzfristig anderweitig vermietet werden.
+                </p>
+                <p>
+                  Die gebuchte Spielzeit beginnt und endet pünktlich zur reservierten Zeit. Bei verspätetem Spielantritt durch den Nutzer besteht kein Anspruch auf Verlängerung der Spielzeit.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">4. Haftung &amp; Beschädigungen</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">5. Platzordnung &amp; Schuhwerk</h4>
                 <p>
-                  Die Benutzung der gesamten Sportanlage erfolgt auf eigene Gefahr. Für mitgebrachte Wertsachen, Bekleidung und Ausrüstung übernimmt Courts Diez keine Haftung. Jeder Nutzer haftet für von ihm schuldhaft verursachte Schäden an den Plätzen, Glaswänden, Netzen oder Leihgeräten.
+                  Das Betreten der Spielfelder ist nur in angemessener Sportbekleidung und mit geeignetem Schuhwerk gestattet:
+                </p>
+                <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
+                  <li><strong>Tennisplatz (Teppichboden):</strong> Es dürfen ausschließlich spezielle Hallentennisschuhe mit <strong>völlig glatter und abriebfester (non-marking) Sohle ohne Profil</strong> getragen werden. Das Betreten mit profilierten Schuhen, Sandplatzschuhen oder Straßenschuhen ist strengstens untersagt.</li>
+                  <li><strong>Padel-Courts:</strong> Saubere Hallen- oder Sportschuhe mit abriebfester Sohle.</li>
+                  <li>Straßenschuhe sind vor dem Betreten der Courts in den Umkleiden gegen saubere Hallenschuhe zu wechseln. Bei vorsätzlicher oder grob fahrlässiger Verschmutzung oder Beschädigung der Beläge werden die Reinigungskosten dem Verursacher in Rechnung gestellt.</li>
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">6. Kostenloses Leihmaterial &amp; Equipment</h4>
+                <p>
+                  Leihschläger und Bälle werden den Nutzern vor Ort kostenfrei zur Verfügung gestellt. Das Material ist pfleglich zu behandeln und darf ausschließlich während der gebuchten Spielzeit <strong>innerhalb der Halle</strong> genutzt werden.
+                </p>
+                <p>
+                  Nach Spielende ist das gesamte Leihmaterial vollständig an die dafür vorgesehenen Stationen zurückzulegen. Bei vorsätzlicher Beschädigung (z. B. Schlagen des Schlägers gegen Glaswände, Gitter oder Einrichtungsgegenstände) oder Verlust/Entwendung haftet der Nutzer auf Ersatz des Wiederbeschaffungswerts.
                 </p>
               </div>
 
               <div className="space-y-2">
-                <h4 className="font-display font-700 uppercase text-lg text-white">5. Öffnungszeiten &amp; Leihmaterial</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">7. Hausordnung, Sicherheit &amp; Sauberkeit</h4>
+                <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
+                  <li><strong>Öffnungszeiten:</strong> Die Anlage ist täglich von 06:00 bis 24:00 Uhr geöffnet.</li>
+                  <li><strong>Rauchverbot:</strong> Im gesamten Gebäude gilt ein striktes Rauch- und Dampfverbot (inkl. E-Zigaretten und Vapes).</li>
+                  <li><strong>Getränke &amp; Speisen:</strong> Auf den Spielfeldern sind nur bruchsichere Trinkflaschen gestattet. <strong>Glasflaschen sind auf den Courts streng verboten.</strong> Der Verzehr von Speisen ist nur im Aufenthalts-/Loungebereich gestattet.</li>
+                  <li><strong>Tiere:</strong> Das Mitführen von Tieren in den Hallen- und Courtbereich ist nicht gestattet.</li>
+                  <li><strong>Hausrecht:</strong> Den Anweisungen des Hallenpersonals und der Geschäftsleitung ist Folge zu leisten. Bei groben Verstößen gegen die Platzordnung kann ein Hallenverweis ohne Rückerstattungsanspruch ausgesprochen werden.</li>
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">8. Haftung &amp; Wertsachen</h4>
                 <p>
-                  Die Anlage ist täglich von 06:00 bis 24:00 Uhr geöffnet. Leihschläger stehen kostenlos vor den Courts zur Verfügung und sind nach dem Spiel ordnungsgemäß zurückzulegen.
+                  Die Tennishalle Diez OHG haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, die auf einer vorsätzlichen oder fahrlässigen Pflichtverletzung beruhen.
+                </p>
+                <p>
+                  Für sonstige Sach- und Vermögensschäden haftet die Betreiberin nur bei Vorsatz und grober Fahrlässigkeit sowie bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten).
+                </p>
+                <p>
+                  Für den Verlust, Diebstahl oder die Beschädigung von mitgebrachten Gegenständen, Kleidung, Sportgeräten oder Wertsachen in den Umkleideräumen, Hallenbereichen oder auf dem Außengelände/Parkplatz wird keine Haftung übernommen.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">9. Betriebsstörungen &amp; Höhere Gewalt</h4>
+                <p>
+                  Kann ein gebuchter Tennisplatz aus Gründen, die von der Betreiberin zu vertreten sind (z. B. Beleuchtungs- oder Heizungsausfall), oder infolge höherer Gewalt nicht bespielt werden, wird dem Kunden der gezahlte Betrag erstattet oder ein kostenloser Ersatztermin bereitgestellt. Weitergehende Ansprüche (z. B. Fahrt- oder Anreisekosten) sind ausgeschlossen.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">10. Verbraucherstreitbeilegung &amp; Schlussbestimmungen</h4>
+                <p>
+                  Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" className="text-court-light underline">ec.europa.eu/consumers/odr</a>. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).
+                </p>
+                <p>
+                  Es gilt das Recht der Bundesrepublik Deutschland. Sollten einzelne Bestimmungen dieser Bedingungen unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen hiervon unberührt.
                 </p>
               </div>
             </div>
