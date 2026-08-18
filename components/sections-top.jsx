@@ -87,7 +87,20 @@ function Hero({ ui, onOpenBooking }) {
       {/* content */}
       <div className="relative z-10 flex-1 flex items-end">
         <div className="mx-auto max-w-7xl w-full px-5 sm:px-8 pb-12 pt-32">
-          <Reveal><Eyebrow color="ball">Padel &amp; Tennis · Diez</Eyebrow></Reveal>
+          <Reveal>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ball/20 border border-ball/50 text-ball font-mono text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg shadow-ball/10">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-ball opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-ball" />
+                </span>
+                🎉 Grand Opening · 12.09.2026
+              </span>
+              <span className="font-mono text-xs uppercase tracking-widest text-white/60 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full hidden sm:inline-block">
+                Eröffnungsparty &amp; Show-Matches
+              </span>
+            </div>
+          </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-6 font-display font-900 uppercase leading-[0.9] tracking-[-0.01em] text-[clamp(3.2rem,9vw,8.5rem)]">
               MORE THAN<br />
@@ -96,7 +109,7 @@ function Hero({ ui, onOpenBooking }) {
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-7 max-w-2xl text-lg sm:text-xl text-white/75 leading-relaxed">
-              Bei uns geht es nicht nur um den nächsten Punkt. Es geht um Bewegung, Begegnung und die Freude am Spiel. Courts Diez verbindet die Dynamik des Padel mit der Tradition des Tennis.
+              Am <strong className="text-white font-bold">12. September 2026</strong> feiern wir unser <span className="text-ball font-semibold">Grand Opening mit Eröffnungsparty</span>! Vier moderne Padel-Courts und ein Tennisplatz – sichere dir jetzt schon vorab deinen Court zum Start.
             </p>
           </Reveal>
           <Reveal delay={240}>

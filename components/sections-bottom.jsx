@@ -911,6 +911,12 @@ function BookingModal({ isOpen, onClose, ui }) {
           </button>
         </div>
 
+        {/* Grand Opening Banner */}
+        <div className="bg-ball/10 border-b border-ball/20 px-6 py-3 flex items-center gap-3 text-xs sm:text-sm font-mono text-ball">
+          <span className="text-base shrink-0">🎉</span>
+          <span><strong>Grand Opening am 12.09.2026:</strong> Offizieller Spielbetrieb startet mit großer Eröffnungsparty!</span>
+        </div>
+
         {/* content grid: 2 columns */}
         <div className="p-6 sm:p-8 grid md:grid-cols-2 gap-6 bg-anthra-900">
           {/* Padel Card */}
