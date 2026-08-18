@@ -564,7 +564,6 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
                 <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
                   <li><strong>Art. 6 Abs. 1 lit. a DSGVO:</strong> Einwilligung der betroffenen Person.</li>
                   <li><strong>Art. 6 Abs. 1 lit. b DSGVO:</strong> Erfüllung eines Vertrags oder Durchführung vorvertraglicher Maßnahmen (z. B. Platzreservierung, Anfragen).</li>
-                  <li><strong>Art. 6 Abs. 1 lit. c DSGVO:</strong> Erfüllung einer rechtlichen Verpflichtung (z. B. steuer- und handelsrechtliche Aufbewahrungspflichten).</li>
                   <li><strong>Art. 6 Abs. 1 lit. f DSGVO:</strong> Wahrung unserer berechtigten Interessen (z. B. stabiler und sicherer Webseitenbetrieb, Missbrauchsprävention).</li>
                 </ul>
               </div>
@@ -578,6 +577,7 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
                   <li><strong>Server-Log-Dateien:</strong> Werden aus Sicherheitsgründen (z. B. zur Aufklärung von Missbrauchs- oder Angriffsversuchen) für eine Dauer von <strong>7 bis maximal 14 Tagen</strong> gespeichert und danach automatisch gelöscht oder anonymisiert.</li>
                   <li><strong>Kontaktanfragen (Telefon / E-Mail):</strong> Daten aus Anfragen werden nach abschließender Bearbeitung Ihres Anliegens gelöscht, sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen.</li>
                   <li><strong>Buchungs- &amp; Abrechnungsdaten:</strong> Soweit über Telefon oder Buchungssysteme buchhalterisch relevante Belege entstehen, unterliegen diese den gesetzlichen Aufbewahrungsfristen von <strong>6 bis 10 Jahren</strong> gemäß § 147 AO (Abgabenordnung) und § 257 HGB (Handelsgesetzbuch).</li>
+                  <li><strong>Videoüberwachungsaufnahmen (Halle):</strong> Werden nach spätestens <strong>72 Stunden</strong> automatisch und unwiderruflich überschrieben bzw. gelöscht, sofern kein konkreter meldepflichtiger Vorfall vorliegt.</li>
                 </ul>
               </div>
 
@@ -660,12 +660,50 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-display font-700 uppercase text-lg text-white">11. Ihre Rechte als betroffene Person</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">11. Videoüberwachung in der Sportanlage / Halle</h4>
+                <p>
+                  In ausgewählten Bereichen unserer Sport- und Padel-Halle (z. B. Eingangsbereiche, Halleninnenbereich / Court-Flächen) ist eine optische Videoüberwachungsanlage installiert. Die überwachten Bereiche sind vor Ort durch gut sichtbare Hinweisschilder (Piktogramme) gekennzeichnet.
+                </p>
+
+                <h5 className="font-display font-600 text-base text-white/90 pt-1">Zwecke der Videoüberwachung &amp; berechtigtes Interesse</h5>
+                <p>
+                  Die Videoüberwachung erfolgt zur:
+                </p>
+                <ul className="list-disc list-inside space-y-1 pl-2 text-white/70 text-sm">
+                  <li>Wahrnehmung des Hausrechts und Verhinderung von unberechtigtem Zutritt</li>
+                  <li>Schutz unseres Eigentums, der Sporteinrichtungen und Ausrüstung vor Vandalismus, Einbruch, Sachbeschädigung und Diebstahl</li>
+                  <li>Aufklärung von Straftaten sowie Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen</li>
+                  <li>Gewährleistung der Sicherheit von Besuchern, Sportlern und Mitarbeitern</li>
+                </ul>
+
+                <h5 className="font-display font-600 text-base text-white/90 pt-1">Rechtsgrundlage</h5>
+                <p>
+                  Die Verarbeitung erfolgt auf Grundlage von <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (Wahrung der berechtigten Interessen des Verantwortlichen) in Verbindung mit <strong>§ 4 BDSG</strong> (Videoüberwachung öffentlich zugänglicher Räume).
+                </p>
+
+                <h5 className="font-display font-600 text-base text-white/90 pt-1">Keine Überwachung sensibler Bereiche &amp; keine Tonaufnahmen</h5>
+                <p>
+                  Die Kameras erfassen ausschließlich <strong>Bilddaten</strong>; es erfolgt <strong>keine Tonaufnahme</strong>. Sensible Schutzbereiche (wie Umkleideräume, Duschen, Toiletten oder sonstige Sanitärbereiche) sind von jeder Videoüberwachung ausnahmslos ausgeschlossen.
+                </p>
+
+                <h5 className="font-display font-600 text-base text-white/90 pt-1">Speicherdauer &amp; automatische Löschung</h5>
+                <p>
+                  Die Aufnahmen werden rollierend gespeichert und nach spätestens <strong>72 Stunden</strong> automatisch und unwiderruflich überschrieben bzw. gelöscht. Eine längere Speicherung erfolgt ausschließlich dann, wenn die Daten im Einzelfall zur Verfolgung von konkreten Straftaten, Vandalismus oder zur Sicherung von Beweisen für zivilrechtliche Ansprüche erforderlich sind. In diesem Fall werden die Daten nach endgültiger Klärung des Vorfalls gelöscht.
+                </p>
+
+                <h5 className="font-display font-600 text-base text-white/90 pt-1">Empfänger der Daten</h5>
+                <p>
+                  Zugriff auf die Aufzeichnungen haben ausschließlich speziell autorisierte Personen der Geschäftsleitung. Eine Weitergabe an Dritte erfolgt ausschließlich an Strafverfolgungs- oder Gerichtsbehörden bzw. Rechtsbeistände bei Vorliegen eines konkreten strafrechtlichen Vorfalls oder zur Durchsetzung berechtigter zivilrechtlicher Ansprüche.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">12. Ihre Rechte als betroffene Person</h4>
                 <p>Sie haben im Rahmen der DSGVO jederzeit folgende Rechte:</p>
                 <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/70 text-sm">
                   <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Recht auf unentgeltliche Auskunft über die zu Ihrer Person gespeicherten Daten.</li>
                   <li><strong>Recht auf Berichtigung (Art. 16 DSGVO):</strong> Recht auf Korrektur unrichtiger oder unvollständiger Daten.</li>
-                  <li><strong>Recht auf Löschung (Art. 17 DSGVO):</strong> Recht auf Löschung („Recht auf Vergessenwerden“), sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
+                  <li><strong>Recht auf Löschung (Art. 17 DSGVO):</strong> Recht auf Löschung („Recht auf Vergessenwerden“), sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen.</li>
                   <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Recht auf Einschränkung der Datenverarbeitung.</li>
                   <li><strong>Recht auf Datenübertragbarkeit (Art. 20 DSGVO):</strong> Recht auf Übermittlung der bereitgestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format.</li>
                   <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO Widerspruch einzulegen.</li>
@@ -674,7 +712,7 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-display font-700 uppercase text-lg text-white">12. Beschwerderecht bei der zuständigen Aufsichtsbehörde</h4>
+                <h4 className="font-display font-700 uppercase text-lg text-white">13. Beschwerderecht bei der zuständigen Aufsichtsbehörde</h4>
                 <p>
                   Im Falle von datenschutzrechtlichen Verstößen steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu:
                 </p>
