@@ -947,7 +947,7 @@ function BookingModal({ isOpen, onClose, ui }) {
             </div>
 
             <div className="mt-6 pt-2">
-              <Btn href="https://playtomic.io" external variant="primary" accent="court" radius={ui.btn} className="w-full !py-3.5 !text-base shadow-lg shadow-court/20">
+              <Btn href="https://playtomic.com/tenant/33fd284f-5570-4892-a2dc-309e4b2ced75?utm_source=app_android&utm_campaign=share" external variant="primary" accent="court" radius={ui.btn} className="w-full !py-3.5 !text-base shadow-lg shadow-court/20">
                 <Icon.app width="18" /> Über Playtomic buchen <Icon.arrow width="16" />
               </Btn>
             </div>
@@ -1063,7 +1063,7 @@ function Footer({ ui, onOpenLegal, onOpenBooking }) {
             <div>
               <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/40">Buchen</div>
               <ul className="mt-4 space-y-3">
-                <li><a href="https://playtomic.io" target="_blank" rel="noopener" className="text-white/75 hover:text-ball transition-colors">Padel via Playtomic</a></li>
+                <li><a href="https://playtomic.com/tenant/33fd284f-5570-4892-a2dc-309e4b2ced75?utm_source=app_android&utm_campaign=share" target="_blank" rel="noopener" className="text-white/75 hover:text-ball transition-colors">Padel via Playtomic</a></li>
                 <li><a href="tel:+49643262204" className="text-white/75 hover:text-ball transition-colors">Tennis: 06432 - 62204</a></li>
                 <li><a href="mailto:info@courtsdiez.de" className="text-white/75 hover:text-ball transition-colors">info@courtsdiez.de</a></li>
               </ul>

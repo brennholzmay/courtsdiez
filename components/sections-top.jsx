@@ -99,7 +99,7 @@ function Hero({ ui, onOpenBooking }) {
               <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-white">
                 <span className="font-display font-800 uppercase tracking-wide text-base sm:text-lg text-white">Grand Opening Party</span>
                 <span className="hidden sm:inline-block text-white/30">|</span>
-                <span className="font-mono text-xs uppercase tracking-wider text-white/70">Show-Matches · Drinks · Courts ab sofort vorab buchbar</span>
+                <span className="font-mono text-xs uppercase tracking-wider text-white/70">Show-Matches · Drinks · Courts bald vorab buchbar!</span>
               </div>
             </div>
           </Reveal>
@@ -201,7 +201,7 @@ function Courts({ ui }) {
                         <div className="mt-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-white/50">Verfügbarkeit live · 24/7 online</div>
                       </div>
                     </div>
-                    <Btn href="https://playtomic.io" external variant="primary" accent="court" radius={ui.btn} className="!px-6 !py-3 !text-sm">
+                    <Btn href="https://playtomic.com/tenant/33fd284f-5570-4892-a2dc-309e4b2ced75?utm_source=app_android&utm_campaign=share" external variant="primary" accent="court" radius={ui.btn} className="!px-6 !py-3 !text-sm">
                       In Playtomic buchen <Icon.arrow width="16" className="transition-transform group-hover:translate-x-0.5" />
                     </Btn>
                   </div>
