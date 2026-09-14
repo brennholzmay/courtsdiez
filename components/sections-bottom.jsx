@@ -453,7 +453,8 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
   const tabs = [
     { id: 'impressum', label: 'Impressum' },
     { id: 'datenschutz', label: 'Datenschutz' },
-    { id: 'agb', label: 'AGB & Platzordnung' },
+    { id: 'agb', label: 'AGB' },
+    { id: 'hausordnung', label: 'Hausordnung' },
   ];
 
   return (
@@ -867,6 +868,255 @@ function LegalModal({ activeTab, onClose, setTab, ui }) {
               </div>
             </div>
           )}
+
+          {activeTab === 'hausordnung' && (
+            <div className="space-y-6">
+              <div className="border-l-2 border-ball pl-4">
+                <span className="font-mono text-xs uppercase tracking-widest text-ball font-bold">Courts.Diez – Padel &amp; Tennis</span>
+                <h3 className="mt-1 font-display font-800 uppercase text-2xl sm:text-3xl text-white">Hausordnung</h3>
+                <p className="mt-2 text-white/70 text-sm sm:text-base">
+                  Willkommen bei Courts.Diez! Damit sich alle bei uns wohlfühlen und sicher spielen können, bitten wir dich, die folgende Hausordnung zu beachten.
+                </p>
+              </div>
+
+              {/* 1. Nutzung der Anlage & Haftung */}
+              <div className="space-y-2.5">
+                <h4 className="font-display font-700 uppercase text-lg text-white">1. Nutzung der Anlage &amp; Haftung</h4>
+                <p>
+                  Die Nutzung der Sportanlage und der Courts erfolgt grundsätzlich auf eigene Gefahr, unbeschadet der nachfolgenden gesetzlichen Haftungsregelungen.
+                </p>
+                <p>
+                  Padel und Tennis sind dynamische Sportarten, bei denen trotz ordnungsgemäßer Nutzung sporttypische Verletzungs- und Kollisionsrisiken bestehen. Jeder Spieler ist selbst dafür verantwortlich, seine gesundheitliche und körperliche Eignung für die sportliche Betätigung einzuschätzen und sein Spielverhalten den eigenen Fähigkeiten anzupassen.
+                </p>
+                <div className="mt-3 p-4 bg-white/5 border border-white/10 space-y-2 text-sm text-white/80">
+                  <div className="font-display font-700 uppercase tracking-wide text-white text-xs">Haftung des Betreibers</div>
+                  <p>
+                    Der Betreiber haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, die auf einer vorsätzlichen oder fahrlässigen Pflichtverletzung des Betreibers, seiner gesetzlichen Vertreter oder Erfüllungsgehilfen beruhen.
+                  </p>
+                  <p>
+                    Für sonstige Schäden, insbesondere Sach- und Vermögensschäden, haftet der Betreiber unbeschränkt bei Vorsatz und grober Fahrlässigkeit.
+                  </p>
+                  <p>
+                    Bei leicht fahrlässiger Verletzung einer wesentlichen Vertragspflicht – also einer Pflicht, deren Erfüllung die ordnungsgemäße Durchführung des Vertrags überhaupt erst ermöglicht und auf deren Einhaltung der Nutzer regelmäßig vertrauen darf – ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt.
+                  </p>
+                  <p>
+                    Eine weitergehende Haftung des Betreibers für leichte Fahrlässigkeit ist, soweit gesetzlich zulässig, ausgeschlossen.
+                  </p>
+                </div>
+              </div>
+
+              {/* 2. Buchung & Spielzeit */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">2. Buchung &amp; Spielzeit</h4>
+                <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/80 text-sm sm:text-base">
+                  <li>Padelcourts dürfen ausschließlich nach vorheriger Buchung und Bezahlung über Playtomic genutzt werden.</li>
+                  <li>Die Courts dürfen nur innerhalb der gebuchten Spielzeit genutzt werden. Bitte beendet euer Spiel pünktlich, damit nachfolgende Spieler ihren Court rechtzeitig übernehmen können.</li>
+                  <li>Spielen ohne vorherige Buchung ist nicht gestattet.</li>
+                  <li>Der Tennisplatz wird gemäß den hierfür geltenden Buchungsbedingungen genutzt.</li>
+                </ul>
+              </div>
+
+              {/* 3. EGYM Wellpass */}
+              <div className="space-y-3 p-5 bg-court/10 border border-court/30">
+                <div className="flex items-center gap-2.5">
+                  <span className="px-2.5 py-1 bg-court text-white font-mono text-xs font-bold uppercase tracking-wider">Vorteil</span>
+                  <h4 className="font-display font-700 uppercase text-lg text-white">3. EGYM Wellpass</h4>
+                </div>
+                <p>
+                  EGYM Wellpass-Mitglieder können bei Courts.Diez einmal täglich 60 Minuten auf einem unserer Courts im Rahmen des vereinbarten Wellpass-Vorteils spielen.
+                </p>
+                <p>
+                  Der Wellpass-Vorteil gilt ausschließlich für den eigenen Spieleranteil des jeweiligen Wellpass-Mitglieds. Die Anteile weiterer Mitspieler sind hiervon nicht betroffen und werden regulär über Playtomic berechnet.
+                </p>
+
+                <div className="mt-3 pt-3 border-t border-white/10 space-y-2">
+                  <h5 className="font-display font-700 uppercase tracking-wide text-white text-sm">Registrierung vor der ersten Buchung</h5>
+                  <p className="text-white/80 text-sm">
+                    Damit der Wellpass-Vorteil über Playtomic berücksichtigt werden kann, ist vor der ersten Buchung eine einmalige Registrierung bei Courts.Diez erforderlich. Bitte sende hierfür eine E-Mail an: <a href="mailto:info@courtsdiez.de" className="text-ball font-semibold underline">info@courtsdiez.de</a>
+                  </p>
+                  <div className="text-sm text-white/80 font-mono">
+                    <span className="text-white font-bold block mb-1">Benötigt werden:</span>
+                    <ul className="list-disc list-inside space-y-1 pl-2 text-white/75">
+                      <li>die E-Mail-Adresse, mit der du bei Playtomic registriert bist</li>
+                      <li>ein Screenshot deiner gültigen EGYM Wellpass-Mitgliedschaft</li>
+                    </ul>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Nach erfolgreicher Registrierung hinterlegen wir den Wellpass-Vorteil in deinem Playtomic-Profil. Der Wellpass-Vorteil kann erst nach unserer Bestätigung genutzt werden.
+                  </p>
+                  <p className="text-white/80 text-sm">
+                    Bei jedem Besuch ist zusätzlich der Check-in vor Ort über die EGYM Wellpass-App verpflichtend. Ohne ordnungsgemäßen Check-in besteht kein Anspruch auf den Wellpass-Vorteil.
+                  </p>
+                  <p className="text-white/70 text-xs italic">
+                    Eine nachträgliche Berücksichtigung des Wellpass-Vorteils bei bereits vorgenommenen Buchungen ist grundsätzlich nicht möglich.
+                  </p>
+                </div>
+              </div>
+
+              {/* 4. Schuhe & Courts */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">4. Schuhe &amp; Courts</h4>
+                <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/80 text-sm sm:text-base">
+                  <li>Die Courts dürfen ausschließlich mit sauberen und geeigneten Sportschuhen betreten werden.</li>
+                  <li>Die Schuhe dürfen nicht im Freien getragen worden sein und müssen über eine nicht abfärbende Sohle (Non-Marking) verfügen.</li>
+                  <li>Straßenschuhe sowie ungeeignetes oder verschmutztes Schuhwerk sind auf den Courts nicht gestattet.</li>
+                </ul>
+              </div>
+
+              {/* 5. Nutzung der Padel-Courts & Sicherheitshinweise */}
+              <div className="space-y-3">
+                <h4 className="font-display font-700 uppercase text-lg text-white">5. Nutzung der Padel-Courts &amp; Sicherheitshinweise</h4>
+                <p>
+                  Den Spielern ist bewusst, dass Padel eine dynamische Sportart ist, bei der die Court-Wände aus Glas- und Gitterelementen aktiv in das Spiel einbezogen werden. Der sportartspezifische Kontakt mit den Wänden ist Bestandteil des normalen Padelspiels.
+                </p>
+                <p>
+                  Die Glasscheiben bestehen aus Sicherheitsglas. Dennoch ist jede unübliche, mutwillige oder nicht sportartspezifische Belastung der Glas- und Gitterwände untersagt.
+                </p>
+                <div>
+                  <span className="font-semibold text-white block mb-1.5 text-sm sm:text-base">Insbesondere ist es nicht gestattet:</span>
+                  <ul className="list-disc list-inside space-y-1 pl-2 text-white/75 text-sm sm:text-[15px]">
+                    <li>aus Frust oder Mutwillen mit Padelschlägern oder anderen Gegenständen gegen Glasscheiben oder Gitter zu schlagen oder Gegenstände dagegen zu werfen,</li>
+                    <li>sich außerhalb einer normalen Spielsituation absichtlich mit vollem Körpergewicht gegen die Glasscheiben zu werfen,</li>
+                    <li>an den Gittern oder anderen Bestandteilen der Courtanlage hochzuklettern,</li>
+                    <li>sich an Netzen, Netzpfosten, Türen oder anderen Bestandteilen der Courtanlage zu hängen.</li>
+                  </ul>
+                </div>
+
+                <div className="p-3.5 bg-white/5 border-l-2 border-ball text-sm sm:text-[15px] space-y-2">
+                  <p>
+                    <strong className="text-white">Sichtkontrolle vor Spielbeginn:</strong> Vor Spielbeginn ist der Court auf offensichtlich erkennbare Mängel oder Beschädigungen zu überprüfen. Hierzu zählen insbesondere Risse oder Beschädigungen der Glasscheiben, lose oder beschädigte Gitterelemente, Schäden am Boden, Netz oder an den Türen.
+                  </p>
+                  <p>
+                    Festgestellte oder während des Spiels auftretende Beschädigungen und Gefahrenstellen sind unverzüglich Courts.Diez zu melden. Ein Court mit einer erkennbaren sicherheitsrelevanten Beschädigung darf nicht weiter bespielt werden.
+                  </p>
+                </div>
+
+                <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/80 text-sm sm:text-base">
+                  <li>Padelschläger sind während des Spiels mit der vorhandenen Sicherheitsschlaufe am Handgelenk zu sichern.</li>
+                  <li>Schäden, die durch schuldhafte unsachgemäße oder mutwillige Nutzung der Anlage oder der Courts entstehen, sind vom Verursacher nach den gesetzlichen Bestimmungen zu ersetzen.</li>
+                  <li>Das Betreten der Spielflächen ist grundsätzlich den Spielern der jeweiligen Buchung vorbehalten.</li>
+                </ul>
+              </div>
+
+              {/* 6. Essen & Getränke */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">6. Essen &amp; Getränke</h4>
+                <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/80 text-sm sm:text-base">
+                  <li>Auf den Spielflächen ist der Verzehr von Speisen nicht gestattet.</li>
+                  <li><strong>Gläser und Glasflaschen sind auf den Courts verboten.</strong></li>
+                  <li>Getränke dürfen ausschließlich in geeigneten, bruchsicheren und möglichst verschließbaren Behältern mitgeführt werden.</li>
+                </ul>
+              </div>
+
+              {/* 7. Leihschläger & Equipment */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">7. Leihschläger &amp; Equipment</h4>
+                <p>
+                  Unsere Leihschläger stehen unseren Spielern kostenlos zur Verfügung.
+                </p>
+                <p>
+                  Bitte behandelt sämtliche Leihgegenstände sorgfältig und bringt sie unmittelbar nach dem Spiel wieder an den dafür vorgesehenen Platz zurück.
+                </p>
+                <p className="text-white/70 text-sm">
+                  Für schuldhaft verursachte Beschädigungen oder den Verlust von Leihequipment haftet der Verursacher nach den gesetzlichen Bestimmungen.
+                </p>
+              </div>
+
+              {/* 8. Schäden & persönliche Gegenstände */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">8. Schäden &amp; persönliche Gegenstände</h4>
+                <p>
+                  Die gesamte Anlage, die Courts, das Inventar und das zur Verfügung gestellte Equipment sind pfleglich zu behandeln.
+                </p>
+                <p>
+                  Wer schuldhaft Schäden an der Anlage oder am Inventar verursacht, haftet hierfür nach den gesetzlichen Bestimmungen.
+                </p>
+                <p>
+                  Für mitgebrachte Kleidung, Sportausrüstung, Wertgegenstände und sonstige persönliche Gegenstände wird keine Verwahrung übernommen.
+                </p>
+                <p className="text-white/70 text-sm">
+                  Die Haftung von Courts.Diez für Verlust oder Beschädigung persönlicher Gegenstände richtet sich nach den in Punkt 1 dieser Hausordnung genannten Haftungsregelungen.
+                </p>
+              </div>
+
+              {/* 9. Kinder & Jugendliche */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">9. Kinder &amp; Jugendliche</h4>
+                <p>
+                  Eltern und andere aufsichtspflichtige Personen sind für die ihnen anvertrauten Kinder und Jugendlichen verantwortlich.
+                </p>
+                <p>
+                  Kinder dürfen sich nicht unbeaufsichtigt auf den Courts oder in Bereichen aufhalten, in denen durch den laufenden Spielbetrieb eine Verletzungsgefahr besteht.
+                </p>
+              </div>
+
+              {/* 10. Rücksichtnahme & Fair Play */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">10. Rücksichtnahme &amp; Fair Play</h4>
+                <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/80 text-sm sm:text-base">
+                  <li>Bitte nehmt Rücksicht auf andere Spieler, Besucher und Mitarbeiter.</li>
+                  <li>Beleidigendes, aggressives, gefährdendes oder grob rücksichtsloses Verhalten wird nicht toleriert.</li>
+                  <li>Andere Courts dürfen während des laufenden Spielbetriebs nicht betreten oder durchquert werden.</li>
+                </ul>
+              </div>
+
+              {/* 11. Rauchen, Alkohol & Sicherheit */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">11. Rauchen, Alkohol &amp; Sicherheit</h4>
+                <ul className="list-disc list-inside space-y-1.5 pl-2 text-white/80 text-sm sm:text-base">
+                  <li>Rauchen und offenes Feuer sind in der gesamten Halle untersagt.</li>
+                  <li>Personen, die aufgrund von Alkohol, Drogen oder anderen berauschenden Mitteln erkennbar nicht mehr in der Lage sind, die Anlage sicher zu nutzen, kann die Nutzung der Courts untersagt werden.</li>
+                  <li>Flucht- und Rettungswege sowie Notausgänge müssen jederzeit freigehalten werden.</li>
+                </ul>
+              </div>
+
+              {/* 12. Sauberkeit */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">12. Sauberkeit</h4>
+                <p>
+                  Bitte hinterlasst die Courts, Lounge, Umkleiden, Sanitärbereiche und alle weiteren Bereiche so, wie ihr sie selbst vorfinden möchtet.
+                </p>
+                <p>
+                  Abfälle gehören in die dafür vorgesehenen Behälter.
+                </p>
+              </div>
+
+              {/* 13. Videoüberwachung */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">13. Videoüberwachung</h4>
+                <p>
+                  Aus Sicherheitsgründen sowie zum Schutz unserer Anlage werden entsprechend gekennzeichnete Bereiche videoüberwacht.
+                </p>
+                <p className="text-white/70 text-sm">
+                  Weitere Informationen zur Verarbeitung personenbezogener Daten und zur Videoüberwachung findet ihr in unseren Datenschutzhinweisen unter <button onClick={() => setTab('datenschutz')} className="text-court-light underline">Datenschutz</button> bzw. unter <a href="https://courtsdiez.de" target="_blank" rel="noopener" className="text-court-light underline">www.courtsdiez.de</a>.
+                </p>
+              </div>
+
+              {/* 14. Hausrecht */}
+              <div className="space-y-2">
+                <h4 className="font-display font-700 uppercase text-lg text-white">14. Hausrecht</h4>
+                <p>
+                  Den Anweisungen des Betreibers sowie seiner Mitarbeiter und Beauftragten ist Folge zu leisten.
+                </p>
+                <p>
+                  Bei erheblichen oder wiederholten Verstößen gegen diese Hausordnung behalten wir uns vor, die weitere Nutzung der Anlage zu untersagen und gegebenenfalls ein Hausverbot auszusprechen.
+                </p>
+                <p className="text-white/70 text-sm">
+                  Ein Anspruch auf Erstattung bereits gebuchter Spielzeiten besteht bei einem schuldhaften Verstoß gegen die Hausordnung grundsätzlich nicht, soweit dem keine gesetzlichen Bestimmungen entgegenstehen.
+                </p>
+              </div>
+
+              {/* Abschluss-Card */}
+              <div className="mt-8 p-6 bg-ball/10 border border-ball/30 text-center space-y-2">
+                <div className="font-display font-800 uppercase tracking-wide text-lg sm:text-xl text-white">
+                  Danke für eure Rücksichtnahme!
+                </div>
+                <div className="text-ball font-display font-700 uppercase tracking-wider text-base sm:text-lg">
+                  Wir wünschen euch viel Spaß und faire Matches bei Courts.Diez.
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* footer inside modal */}
@@ -909,12 +1159,6 @@ function BookingModal({ isOpen, onClose, ui }) {
           <button onClick={onClose} className="p-2 text-white/60 hover:text-white transition-colors" aria-label="Schließen">
             <Icon.close width="24" />
           </button>
-        </div>
-
-        {/* Grand Opening Banner */}
-        <div className="bg-ball/10 border-b border-ball/20 px-6 py-3 flex items-center gap-3 text-xs sm:text-sm font-mono text-ball">
-          <span className="text-base shrink-0">🎉</span>
-          <span><strong>Grand Opening am 12.09.2026:</strong> Offizieller Spielbetrieb startet mit großer Eröffnungsparty!</span>
         </div>
 
         {/* content grid: 2 columns */}
@@ -1075,7 +1319,8 @@ function Footer({ ui, onOpenLegal, onOpenBooking }) {
             <div className="flex flex-wrap items-center gap-6 font-mono text-[12px] uppercase tracking-[0.14em]">
               <button onClick={() => onOpenLegal && onOpenLegal('impressum')} className="text-white/55 hover:text-white transition-colors">Impressum</button>
               <button onClick={() => onOpenLegal && onOpenLegal('datenschutz')} className="text-white/55 hover:text-white transition-colors">Datenschutz</button>
-              <button onClick={() => onOpenLegal && onOpenLegal('agb')} className="text-white/55 hover:text-white transition-colors">AGB &amp; Platzordnung</button>
+              <button onClick={() => onOpenLegal && onOpenLegal('agb')} className="text-white/55 hover:text-white transition-colors">AGB</button>
+              <button onClick={() => onOpenLegal && onOpenLegal('hausordnung')} className="text-white/55 hover:text-white transition-colors">Hausordnung</button>
             </div>
           </div>
         </div>

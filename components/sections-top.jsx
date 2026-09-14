@@ -88,30 +88,17 @@ function Hero({ ui, onOpenBooking }) {
       <div className="relative z-10 flex-1 flex items-center">
         <div className="mx-auto max-w-7xl w-full px-5 sm:px-8 pt-28 sm:pt-36 pb-12 sm:pb-16">
           <Reveal>
-            <div className="inline-flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 p-2 sm:p-2.5 pr-4 sm:pr-6 bg-anthra-900/90 backdrop-blur-md border-2 border-ball shadow-[0_0_35px_rgba(235,255,0,0.25)]">
-              <div className="flex items-center gap-2.5 px-3.5 py-1.5 bg-ball text-anthra-950 font-display font-900 text-sm uppercase tracking-wider">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-anthra-950 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-anthra-950" />
-                </span>
-                <span>🎉 12. Sept 2026</span>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-white">
-                <span className="font-display font-800 uppercase tracking-wide text-base sm:text-lg text-white">Grand Opening Party</span>
-                <span className="hidden sm:inline-block text-white/30">|</span>
-                <span className="font-mono text-xs uppercase tracking-wider text-white/70">Show-Matches · Drinks · Courts bald vorab buchbar!</span>
-              </div>
-            </div>
+            <Eyebrow color="ball">Padel &amp; Tennis · Diez</Eyebrow>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="mt-8 font-display font-900 uppercase leading-[0.9] tracking-[-0.01em] text-[clamp(3.2rem,9vw,8.5rem)]">
+            <h1 className="mt-6 font-display font-900 uppercase leading-[0.9] tracking-[-0.01em] text-[clamp(3.2rem,9vw,8.5rem)]">
               MORE THAN<br />
               <span className="text-ball">A COURT</span>
             </h1>
           </Reveal>
           <Reveal delay={160}>
-            <p className="mt-7 max-w-2xl text-lg sm:text-xl text-white/80 leading-relaxed">
-              Am <strong className="text-white font-bold underline decoration-ball decoration-2 underline-offset-4">12. September 2026</strong> feiern wir unser großes <span className="text-ball font-semibold">Grand Opening mit Party &amp; Rahmenprogramm</span>! Vier moderne Padel-Courts und ein Tennisplatz – sichere dir jetzt schon deinen Court zum Start.
+            <p className="mt-7 max-w-2xl text-lg sm:text-xl text-white/75 leading-relaxed">
+              Bei uns geht es nicht nur um den nächsten Punkt. Es geht um Bewegung, Begegnung und die Freude am Spiel. Courts Diez verbindet die Dynamik des Padel mit der Tradition des Tennis.
             </p>
           </Reveal>
           <Reveal delay={240}>

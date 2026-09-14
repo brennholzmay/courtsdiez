@@ -28,7 +28,7 @@ function App() {
   React.useEffect(() => {
     const checkHash = () => {
       const hash = window.location.hash.replace('#', '').toLowerCase();
-      if (['impressum', 'datenschutz', 'agb'].includes(hash)) {
+      if (['impressum', 'datenschutz', 'agb', 'hausordnung'].includes(hash)) {
         setLegalTab(hash);
       } else if (hash === 'buchen') {
         setBookingOpen(true);
