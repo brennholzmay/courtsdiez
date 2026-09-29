@@ -1299,7 +1299,7 @@ function Footer({ ui, onOpenLegal, onOpenBooking }) {
             <div>
               <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/40">Entdecken</div>
               <ul className="mt-4 space-y-3">
-                {[['Courts', '#courts'], ['Padel-Regeln', '#regeln'], ['FAQ', '#faq'], ['Kontakt & Anfahrt', '#kontakt']].map(([l, h]) => (
+                {[['Courts', '#courts'], ['Eindrücke', '#galerie'], ['Padel-Regeln', '#regeln'], ['FAQ', '#faq'], ['Kontakt & Anfahrt', '#kontakt']].map(([l, h]) => (
                   <li key={l}><a href={h} className="text-white/75 hover:text-ball transition-colors">{l}</a></li>
                 ))}
               </ul>

@@ -55,6 +55,7 @@ function App() {
       <main>
         <Hero ui={ui} onOpenBooking={() => setBookingOpen(true)} />
         <Courts ui={ui} />
+        <Gallery ui={ui} />
         <Rules ui={ui} />
         <Faq ui={ui} />
         <Contact ui={ui} />

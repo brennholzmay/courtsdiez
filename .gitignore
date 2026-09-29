@@ -5,3 +5,4 @@ npm-debug.log*
 screenshots/
 *.zip
 .thumbnail
+assets/img/raw/

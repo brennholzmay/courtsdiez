@@ -3,6 +3,7 @@ const { useState: useStateT, useEffect: useEffectT } = React;
 
 const NAV = [
   { id: 'courts', label: 'Courts' },
+  { id: 'galerie', label: 'Eindrücke' },
   { id: 'regeln', label: 'Padel-Regeln' },
   { id: 'faq', label: 'FAQ' },
   { id: 'kontakt', label: 'Kontakt' },
@@ -17,52 +18,77 @@ function Nav({ ui, onOpenBooking }) {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffectT(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   return (
-    <header className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${scrolled ? 'bg-anthra-900/90 backdrop-blur-md border-b border-white/10' : 'bg-transparent border-b border-transparent'}`}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="flex h-[88px] items-center justify-between">
-          <a href="#top" className="flex items-center gap-3 shrink-0">
-            <img src="assets/courts-diez-logo.png" alt="Courts Diez · Padel & Tennis" className="h-14 sm:h-16 md:h-18 w-auto object-contain transition-all duration-300" />
-          </a>
-          <nav className="hidden md:flex items-center gap-9">
-            {NAV.map((n) => (
-              <a key={n.id} href={`#${n.id}`} className="font-display font-semibold uppercase tracking-wide text-[15px] text-white/70 hover:text-white transition-colors">
-                {n.label}
-              </a>
-            ))}
-          </nav>
-          <div className="hidden md:block">
-            <Btn onClick={onOpenBooking} variant="primary" accent={ui.primaryAccent} radius={ui.btn} className="!px-6 !py-3 !text-[14px]">
-              Court buchen <Icon.arrow width="17" className="transition-transform group-hover:translate-x-0.5" />
-            </Btn>
+    <React.Fragment>
+      <header className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${scrolled ? 'bg-anthra-900/90 backdrop-blur-md border-b border-white/10' : 'bg-transparent border-b border-transparent'}`}>
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="flex h-[88px] items-center justify-between">
+            <a href="#top" className="flex items-center gap-3 shrink-0">
+              <img src="assets/courts-diez-logo.png" alt="Courts Diez · Padel & Tennis" className="h-14 sm:h-16 md:h-18 w-auto object-contain transition-all duration-300" />
+            </a>
+            <nav className="hidden md:flex items-center gap-8 lg:gap-9">
+              {NAV.map((n) => (
+                <a key={n.id} href={`#${n.id}`} className="font-display font-semibold uppercase tracking-wide text-[15px] text-white/70 hover:text-white transition-colors">
+                  {n.label}
+                </a>
+              ))}
+            </nav>
+            <div className="hidden md:block">
+              <Btn onClick={onOpenBooking} variant="primary" accent={ui.primaryAccent} radius={ui.btn} className="!px-6 !py-3 !text-[14px]">
+                Court buchen <Icon.arrow width="17" className="transition-transform group-hover:translate-x-0.5" />
+              </Btn>
+            </div>
+            <button onClick={() => setOpen(true)} className="md:hidden text-white p-2 -mr-2" aria-label="Menü öffnen">
+              <Icon.menu width="26" />
+            </button>
           </div>
-          <button onClick={() => setOpen(true)} className="md:hidden text-white p-2 -mr-2" aria-label="Menü öffnen">
-            <Icon.menu width="26" />
-          </button>
         </div>
-      </div>
+      </header>
 
       {/* mobile drawer */}
-      <div className={`md:hidden fixed inset-0 z-50 transition ${open ? 'pointer-events-auto' : 'pointer-events-none'}`}>
-        <div className={`absolute inset-0 bg-black/70 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`} onClick={() => setOpen(false)} />
-        <div className={`absolute right-0 top-0 h-full w-[80%] max-w-xs bg-anthra-850 border-l border-white/10 p-6 transition-transform duration-300 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
-          <div className="flex justify-between items-center mb-10">
-            <img src="assets/courts-diez-logo.png" alt="Courts Diez" className="h-12 w-auto" />
-            <button onClick={() => setOpen(false)} className="text-white p-2" aria-label="Schließen"><Icon.close width="24" /></button>
+      <div className={`md:hidden fixed inset-0 z-50 transition-opacity duration-300 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setOpen(false)} />
+        <div className={`fixed right-0 top-0 bottom-0 h-full w-[85%] max-w-xs bg-anthra-900 border-l border-white/10 p-6 flex flex-col justify-between overflow-y-auto transition-transform duration-300 shadow-2xl ${open ? 'translate-x-0' : 'translate-x-full'}`}>
+          <div>
+            <div className="flex justify-between items-center mb-8">
+              <img src="assets/courts-diez-logo.png" alt="Courts Diez" className="h-12 w-auto" />
+              <button onClick={() => setOpen(false)} className="text-white p-2 -mr-2 hover:text-ball transition-colors" aria-label="Schließen">
+                <Icon.close width="24" />
+              </button>
+            </div>
+            <div className="flex flex-col gap-1">
+              {NAV.map((n) => (
+                <a
+                  key={n.id}
+                  href={`#${n.id}`}
+                  onClick={() => setOpen(false)}
+                  className="font-display font-semibold uppercase tracking-wide text-2xl text-white/85 hover:text-ball py-3 border-b border-white/5 transition-colors block"
+                >
+                  {n.label}
+                </a>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-col gap-1">
-            {NAV.map((n) => (
-              <a key={n.id} href={`#${n.id}`} onClick={() => setOpen(false)} className="font-display font-semibold uppercase tracking-wide text-2xl text-white/85 hover:text-ball py-3 border-b border-white/5">
-                {n.label}
-              </a>
-            ))}
+          <div className="pt-8 pb-4">
+            <Btn onClick={() => { setOpen(false); onOpenBooking && onOpenBooking(); }} variant="primary" accent={ui.primaryAccent} radius={ui.btn} className="w-full justify-center">
+              Court buchen <Icon.arrow width="17" />
+            </Btn>
           </div>
-          <Btn onClick={() => { setOpen(false); onOpenBooking && onOpenBooking(); }} variant="primary" accent={ui.primaryAccent} radius={ui.btn} className="mt-8 w-full">
-            Court buchen <Icon.arrow width="17" />
-          </Btn>
         </div>
       </div>
-    </header>
+    </React.Fragment>
   );
 }
 
@@ -77,9 +103,14 @@ function Hero({ ui, onOpenBooking }) {
     <section id="top" className="relative min-h-[100svh] flex flex-col overflow-hidden">
       {/* background */}
       <div className="absolute inset-0">
-        <ImageSlot src="assets/img/hero-padel.png" alt="Padel-Action bei Courts Diez" ratio="auto" objectPos="72% 30%" className="!h-full !w-full" />
+        <ImageSlot src="assets/img/hero-padel.jpg" alt="Courts Diez Arena mit Padel- und Tennis-Courts" ratio="auto" objectPos="60% 35%" className="!h-full !w-full" />
       </div>
-      <div className="absolute inset-0" style={{ background: `linear-gradient(180deg, rgba(14,14,15,${0.55 * ui.heroOverlay}) 0%, rgba(14,14,15,${0.35 * ui.heroOverlay}) 38%, rgba(14,14,15,${0.92 * ui.heroOverlay}) 100%)` }} />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: `linear-gradient(90deg, rgba(14,14,15,${0.96 * ui.heroOverlay}) 0%, rgba(14,14,15,${0.82 * ui.heroOverlay}) 45%, rgba(14,14,15,${0.45 * ui.heroOverlay}) 100%), linear-gradient(180deg, rgba(14,14,15,${0.5 * ui.heroOverlay}) 0%, rgba(14,14,15,${0.25 * ui.heroOverlay}) 40%, rgba(14,14,15,${0.95 * ui.heroOverlay}) 100%)`
+        }}
+      />
       {ui.grid && <div className="absolute inset-0 bg-grid bg-grid-fade opacity-70" />}
       <div className="absolute -right-32 top-1/4 h-80 w-80 rounded-full bg-court/20 blur-[120px]" />
       <div className="absolute -left-20 bottom-1/3 h-72 w-72 rounded-full bg-ball/10 blur-[120px]" />
@@ -165,7 +196,7 @@ function Courts({ ui }) {
           {/* PADEL — featured */}
           <Reveal className="lg:col-span-3">
             <div className={`group relative h-full ${ui.card} bg-anthra-800 border border-court/30 glow-blue overflow-hidden`}>
-              <ImageSlot src="assets/img/padel-court.png" alt="Padel-Court mit Panorama-Glaswänden" ratio="16/9" objectPos="center 35%" className="border-b border-white/10" />
+              <ImageSlot src="assets/img/padel-court.jpg" alt="Padel-Courts bei Courts Diez mit Flutlicht und Glaswänden" ratio="16/9" objectPos="center 40%" className="border-b border-white/10" />
               <div className="p-7 sm:p-9">
                 <div className="flex items-baseline gap-3">
                   <span className="font-display font-900 text-6xl text-court-light leading-none">4×</span>
@@ -200,7 +231,7 @@ function Courts({ ui }) {
           {/* TENNIS — phone only */}
           <Reveal delay={120} className="lg:col-span-2">
             <div className={`relative h-full ${ui.card} bg-anthra-800 border border-white/10 overflow-hidden`}>
-              <ImageSlot src="assets/img/tennis-court.png" alt="Klassischer Tennisplatz" ratio="16/9" objectPos="center 40%" className="border-b border-white/10" />
+              <ImageSlot src="assets/img/tennis-court.jpg" alt="Teppichboden Tennisplatz bei Courts Diez" ratio="16/9" objectPos="center 40%" className="border-b border-white/10" />
               <div className="p-7 sm:p-9 flex flex-col h-[calc(100%-0px)]">
                 <div className="flex items-baseline gap-3">
                   <span className="font-display font-900 text-6xl text-white/80 leading-none">1×</span>
