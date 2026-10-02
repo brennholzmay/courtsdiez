@@ -3,6 +3,7 @@ const { useState: useStateT, useEffect: useEffectT } = React;
 
 const NAV = [
   { id: 'courts', label: 'Courts' },
+  { id: 'wellpass', label: 'Wellpass' },
   { id: 'galerie', label: 'Eindrücke' },
   { id: 'regeln', label: 'Padel-Regeln' },
   { id: 'faq', label: 'FAQ' },
@@ -266,4 +267,287 @@ function Courts({ ui }) {
   );
 }
 
-Object.assign(window, { Nav, Hero, Courts });
+/* ==========================================================================
+   WELLPASS — EGYM Wellpass Firmenfitness bei CourtsDiez
+   ========================================================================== */
+function Wellpass({ ui }) {
+  const mailSubject = encodeURIComponent('Wellpass-Freischaltung CourtsDiez');
+  const mailBody = encodeURIComponent(
+    'Hallo CourtsDiez-Team,\n\nich möchte meinen Wellpass-Vorteil für CourtsDiez freischalten lassen.\n\nMeine Playtomic E-Mail-Adresse: \n\nEin Screenshot meiner gültigen Wellpass-Mitgliedschaft ist dieser E-Mail beigefügt.\n\nSportliche Grüße,\n'
+  );
+  const mailHref = `mailto:info@courtsdiez.de?subject=${mailSubject}&body=${mailBody}`;
+
+  return (
+    <section id="wellpass" className="relative py-24 sm:py-32 bg-anthra-950 border-t border-white/10 overflow-hidden">
+      {/* Background radial accents */}
+      <div
+        className="pointer-events-none absolute -top-40 right-0 h-[500px] w-[500px] rounded-full opacity-20 blur-3xl"
+        style={{ background: 'radial-gradient(circle, rgba(47,147,221,0.45) 0%, transparent 70%)' }}
+      />
+      <div
+        className="pointer-events-none absolute -bottom-40 left-0 h-[450px] w-[450px] rounded-full opacity-15 blur-3xl"
+        style={{ background: 'radial-gradient(circle, rgba(250,234,23,0.35) 0%, transparent 70%)' }}
+      />
+
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-12 border-b border-white/10">
+          <div>
+            <Reveal>
+              <Eyebrow color="court">Firmenfitness &amp; Vorteilspartner</Eyebrow>
+              <h2 className="mt-4 font-display font-800 uppercase text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[0.95]">
+                WELLPASS BEI <span className="text-court-light">COURTSDIEZ.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={80}>
+              <p className="mt-4 text-white/70 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                Nutze dein EGYM Wellpass Firmenfitness-Abo bei uns! Hier erfährst du, wie die einmalige Freischaltung abläuft und wie dein Vorteil bei jeder Padel-Buchung berücksichtigt wird.
+              </p>
+            </Reveal>
+          </div>
+
+          <Reveal delay={120} className="shrink-0">
+            <div className={`inline-flex items-center gap-4 bg-anthra-800/90 border border-white/15 px-6 py-4 shadow-xl ${ui.card}`}>
+              <div className="text-right">
+                <div className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-white/50">Offizieller Partner</div>
+                <div className="font-display font-700 uppercase tracking-wide text-white text-sm sm:text-base">EGYM Wellpass</div>
+              </div>
+              <div className="h-8 w-px bg-white/15" />
+              <img
+                src="assets/wellpass-logo.svg"
+                alt="EGYM Wellpass Logo"
+                className="h-7 sm:h-8 w-auto object-contain brightness-100"
+              />
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Notice Banner: Padel vs. Tennis */}
+        <Reveal delay={140} className="mt-8">
+          <div className={`${ui.card} border border-court/40 bg-court/10 p-5 sm:p-6 backdrop-blur-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4`}>
+            <div className="flex items-start sm:items-center gap-4">
+              <div className="h-11 w-11 shrink-0 bg-court/20 text-court-light flex items-center justify-center border border-court/30">
+                <Icon.court width="22" />
+              </div>
+              <div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="font-display font-700 uppercase tracking-wide text-white text-base sm:text-lg">
+                    Gültig für unsere Padelcourts
+                  </span>
+                  <span className="inline-block bg-court text-white font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 font-bold">
+                    Padel only
+                  </span>
+                </div>
+                <p className="mt-1 text-white/75 text-sm sm:text-[15px] leading-relaxed">
+                  👉 <strong>Wellpass gilt bei CourtsDiez für unsere Padelcourts</strong> – der Tennisplatz ist vom Wellpass-Angebot ausgeschlossen.
+                </p>
+              </div>
+            </div>
+            <div className="shrink-0 sm:self-center">
+              <span className="font-mono text-xs text-white/50 bg-anthra-900/80 px-3 py-1.5 border border-white/10 inline-block">
+                Tennis: nur telefonisch regulär buchbar
+              </span>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 2 Main Action Columns */}
+        <div className="mt-8 grid lg:grid-cols-2 gap-8 items-stretch">
+          {/* Card 1: Anmeldung */}
+          <Reveal delay={160} className="h-full">
+            <div className={`h-full flex flex-col ${ui.card} bg-anthra-800/85 border border-white/10 p-7 sm:p-9 relative overflow-hidden group hover:border-court/40 transition-colors duration-300`}>
+              <div className="flex items-center justify-between gap-4">
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-court-light font-bold">
+                  Schritt 1 · Einmalig
+                </span>
+                <span className="h-8 w-8 bg-court/15 text-court-light font-display font-bold flex items-center justify-center text-sm border border-court/30">
+                  1
+                </span>
+              </div>
+
+              <h3 className="mt-4 font-display font-800 uppercase text-2xl sm:text-3xl text-white">
+                So meldest du dich für Wellpass bei uns an
+              </h3>
+              <p className="mt-2 text-white/70 text-[15px] leading-relaxed">
+                Vor deiner ersten Buchung verknüpfen wir deinen Wellpass-Status mit deinem Playtomic-Konto. Bitte sende uns dazu per E-Mail an <a href="mailto:info@courtsdiez.de" className="text-court-light hover:underline font-semibold">info@courtsdiez.de</a>:
+              </p>
+
+              <div className="mt-6 space-y-3">
+                <div className="flex items-start gap-3 bg-anthra-900/90 border border-white/10 p-3.5">
+                  <div className="mt-0.5 text-ball shrink-0">
+                    <Icon.check width="18" />
+                  </div>
+                  <div>
+                    <div className="font-display font-700 uppercase tracking-wide text-white text-sm">
+                      Screenshot deiner Wellpass-Mitgliedschaft
+                    </div>
+                    <div className="text-white/60 text-xs mt-0.5">
+                      Ein aktueller Screenshot deines Mitgliedsprofils aus der offiziellen Wellpass-App.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 bg-anthra-900/90 border border-white/10 p-3.5">
+                  <div className="mt-0.5 text-ball shrink-0">
+                    <Icon.check width="18" />
+                  </div>
+                  <div>
+                    <div className="font-display font-700 uppercase tracking-wide text-white text-sm">
+                      Deine Playtomic E-Mail-Adresse
+                    </div>
+                    <div className="text-white/60 text-xs mt-0.5">
+                      Die exakte E-Mail-Adresse, mit der du bei der Playtomic-App registriert bist.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 border border-white/10 bg-anthra-950/50 text-xs sm:text-[13px] text-white/70 leading-relaxed">
+                <strong className="text-white">Bestätigung per E-Mail:</strong> Sobald dein Wellpass-Vorteil bei uns im System hinterlegt wurde, erhältst du von uns eine schriftliche Bestätigung per E-Mail. Danach kannst du direkt buchen!
+              </div>
+
+              <div className="mt-auto pt-7">
+                <Btn
+                  href={mailHref}
+                  variant="primary"
+                  accent="court"
+                  radius={ui.btn}
+                  className="w-full !text-sm sm:!text-base justify-center"
+                >
+                  <Icon.mail width="18" /> E-Mail zur Freischaltung senden
+                </Btn>
+                <div className="mt-2.5 text-center font-mono text-[11px] text-white/45">
+                  Empfänger: <a href="mailto:info@courtsdiez.de" className="text-white/70 hover:underline">info@courtsdiez.de</a>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Card 2: Ablauf nach Bestätigung */}
+          <Reveal delay={200} className="h-full">
+            <div className={`h-full flex flex-col ${ui.card} bg-anthra-800/85 border border-white/10 p-7 sm:p-9 relative overflow-hidden group hover:border-ball/40 transition-colors duration-300`}>
+              <div className="flex items-center justify-between gap-4">
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-ball font-bold">
+                  Schritt 2 · Bei jedem Match
+                </span>
+                <span className="h-8 w-8 bg-ball/15 text-ball font-display font-bold flex items-center justify-center text-sm border border-ball/30">
+                  2
+                </span>
+              </div>
+
+              <h3 className="mt-4 font-display font-800 uppercase text-2xl sm:text-3xl text-white">
+                Nach der Bestätigung – so funktioniert es
+              </h3>
+              <p className="mt-2 text-white/70 text-[15px] leading-relaxed">
+                Dein Wellpass-Vorteil wird anschließend <strong className="text-white">automatisch</strong> bei deinen Padel-Buchungen über Playtomic berücksichtigt.
+              </p>
+
+              <div className="mt-6 space-y-3.5">
+                {/* Step 1 */}
+                <div className="flex items-start gap-3.5 p-3.5 bg-anthra-900/90 border border-white/10">
+                  <div className="h-7 w-7 shrink-0 bg-white/10 text-white font-mono font-bold text-xs flex items-center justify-center border border-white/15">
+                    01
+                  </div>
+                  <div>
+                    <div className="font-display font-700 uppercase tracking-wide text-white text-base">
+                      Padelcourt über Playtomic buchen
+                    </div>
+                    <p className="text-white/65 text-xs sm:text-[13px] mt-0.5 leading-relaxed">
+                      Wähle wie gewohnt deinen Court und deine Spielzeit. Dein persönlicher Spieleranteil wird automatisch durch deinen hinterlegten Vorteil verrechnet.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="flex items-start gap-3.5 p-3.5 bg-anthra-900/90 border border-white/10">
+                  <div className="h-7 w-7 shrink-0 bg-court/20 text-court-light font-mono font-bold text-xs flex items-center justify-center border border-court/30">
+                    02
+                  </div>
+                  <div>
+                    <div className="font-display font-700 uppercase tracking-wide text-white text-base">
+                      Vor Ort in der Wellpass-App einchecken
+                    </div>
+                    <p className="text-white/65 text-xs sm:text-[13px] mt-0.5 leading-relaxed">
+                      Öffne vor Spielbeginn deine Wellpass-App und checke dich bei <strong className="text-white">CourtsDiez</strong> per QR-Code-Scan ein.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="flex items-start gap-3.5 p-3.5 bg-anthra-900/90 border border-white/10">
+                  <div className="h-7 w-7 shrink-0 bg-ball/20 text-ball font-mono font-bold text-xs flex items-center justify-center border border-ball/30">
+                    03
+                  </div>
+                  <div>
+                    <div className="font-display font-700 uppercase tracking-wide text-white text-base">
+                      Padel spielen &amp; Spaß haben
+                    </div>
+                    <p className="text-white/65 text-xs sm:text-[13px] mt-0.5 leading-relaxed">
+                      Court betreten, Ballwechsel starten und Sport auf Top-Niveau in moderner Atmosphäre genießen!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-auto pt-7">
+                <Btn
+                  href="https://playtomic.com/tenant/33fd284f-5570-4892-a2dc-309e4b2ced75?utm_source=app_android&utm_campaign=share"
+                  external
+                  variant="primary"
+                  accent="ball"
+                  radius={ui.btn}
+                  className="w-full !text-sm sm:!text-base justify-center"
+                >
+                  <Icon.app width="18" /> CourtsDiez in Playtomic öffnen
+                </Btn>
+                <div className="mt-2.5 text-center font-mono text-[11px] text-white/45">
+                  Vorteil wird nach Freischaltung aktiv
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Check-in Policy Notice Box */}
+        <Reveal delay={240} className="mt-8">
+          <div className={`${ui.card} border border-ball/40 bg-anthra-900 p-6 sm:p-7 relative overflow-hidden`}>
+            <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-ball via-court to-ball" />
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div className="flex items-start gap-4 max-w-3xl">
+                <div className="h-11 w-11 shrink-0 bg-ball/15 text-ball flex items-center justify-center border border-ball/30">
+                  <Icon.alert width="22" />
+                </div>
+                <div>
+                  <h4 className="font-display font-800 uppercase tracking-wide text-white text-lg sm:text-xl">
+                    Wichtig: Vor-Ort Check-in bei jedem Match verpflichtend
+                  </h4>
+                  <div className="mt-2 text-white/75 text-sm sm:text-[14px] leading-relaxed space-y-2">
+                    <p>
+                      Bei jedem Besuch musst du dich vor deinem Match vor Ort in der <strong className="text-white">Wellpass-App bei CourtsDiez einchecken</strong>. Nur ein erfolgreich durchgeführter Check-in gilt als gültige Wellpass-Nutzung.
+                    </p>
+                    <p>
+                      Bitte denke daher bei jedem Match an deinen Check-in – <strong className="text-white">auch dann, wenn die Halle zu diesem Zeitpunkt nicht besetzt ist</strong>.
+                    </p>
+                    <p className="text-white/60 text-xs">
+                      ⚠️ Bei wiederholtem Ausbleiben des erforderlichen Wellpass-Check-ins behalten wir uns vor, den bei CourtsDiez hinterlegten Wellpass-Status wieder zu deaktivieren.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="shrink-0 self-stretch md:self-center flex md:flex-col justify-end">
+                <div className="border border-white/10 bg-anthra-950/70 p-4 text-center">
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-ball font-bold">Vor Ort</div>
+                  <div className="font-display font-700 uppercase text-white text-sm mt-0.5">QR-Code scannen</div>
+                  <div className="font-mono text-[10px] text-white/50 mt-1">Wellpass App</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { Nav, Hero, Courts, Wellpass });
